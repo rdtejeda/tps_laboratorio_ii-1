@@ -11,7 +11,7 @@ namespace Entidades
         /// <param name="num2">Operando Dos: Tipo Operando</param>
         /// <param name="operador">Operador: Tipo Char</param>
         /// <returns>Devuelve el resultado: Tipo Double</returns>
-        static double Operar(Operando num1, Operando num2, char operador)
+        public static double Operar(Operando num1, Operando num2, char operador)
         {
             double resultado = 0;
             switch (ValidarOperador(operador))
