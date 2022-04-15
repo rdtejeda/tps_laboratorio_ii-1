@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Operando
+    public class Operando
     {
         private double numero;
 
@@ -28,17 +28,52 @@ namespace Entidades
         /// <returns></returns>
         public static string BinarioDecimal(string binario)
         {
-            
+            string nroDecimal = "Valor inválido";
+            double doubleDecimal = 0;
+            int caracteres = binario.Length;
+            if (EsBinario(binario))
+            {
+                foreach(char i in binario)
+                {
+                    caracteres--;
+                    if(i == '1')
+                    {
+                        doubleDecimal += Math.Pow(2, caracteres);
+                    }
+                }
+                nroDecimal = doubleDecimal.ToString();
+            }
+            return nroDecimal;
         }
 
         /// <summary>
-        /// 
+        /// Devuelve el valor absoluto del resultado en formato BINARIO
         /// </summary>
-        /// <param name="numero"></param>
-        /// <returns></returns>
+        /// <param name="numero">Es el resultado que se debe transformar a BINARIO</param>
+        /// <returns>Devuelve el valor absoluto en BINARIO, caso contrario "Valor Inválido"</returns>
         public static string DecimalBinario(double numero)
         {
-
+            int valorAbsoluto = (int)Math.Round(Math.Abs(numero));
+            string binario = String.Empty;
+            //double cociente = valorAbsoluto;
+            //double resto;
+            int cociente = valorAbsoluto;
+            int resto;
+            if (cociente >= 0)
+            {
+                do
+                {
+                    resto = cociente % 2;
+                    cociente /= 2;
+                    binario = resto.ToString()+binario;
+                    
+                } while (cociente > 0);
+            }
+            else
+            {
+                binario = "Valor Inválido";
+            }
+            return binario;
         }
 
         /// <summary>
@@ -48,7 +83,7 @@ namespace Entidades
         /// <returns></returns>
         public static string DecimalBinario(string numero)
         {
-
+            return "";
         }
 
         /// <summary>
@@ -58,11 +93,20 @@ namespace Entidades
         /// <returns></returns>
         private static bool EsBinario(string binario)
         {
-
+            bool esBinario = true;
+            foreach (char i in binario)
+            {
+                if (i != '0' && i != '1')
+                {
+                    esBinario = false;
+                    break;
+                }
+            }
+            return esBinario;
         }
 
         /// <summary>
-        /// Constructor sin parámetros, setea el valor por defecto en CERO.
+        /// Constructor por defecto sin parámetros, setea el valor por defecto en CERO.
         /// </summary>
         public Operando() :this(0)
         {
@@ -95,8 +139,8 @@ namespace Entidades
         /// <returns>Devuelve resultado RESTA: Tipo DOUBLE</returns>
         public static double operator -(Operando n1, Operando n2)
         {
-            double resultado = double.MinValue;
-
+            //double resultado = double.MinValue;
+            return 1;
         }
 
         /// <summary>
@@ -107,7 +151,7 @@ namespace Entidades
         /// <returns>Devuelve resultado PRODUCTO: Tipo DOUBLE</returns>
         public static double operator *(Operando n1, Operando n2)
         {
-
+            return 1;
         }
 
         /// <summary>
@@ -118,7 +162,7 @@ namespace Entidades
         /// <returns>Devuelve resultado COCIENTE: Tipo DOUBLE</returns>
         public static double operator /(Operando n1, Operando n2)
         {
-
+            return 1;
         }
 
         /// <summary>
@@ -129,7 +173,7 @@ namespace Entidades
         /// <returns>Devuelve resultado SUMA: Tipo DOUBLE</returns>
         public static double operator +(Operando n1, Operando n2)
         {
-
+            return 1;
         }
 
         /// <summary>
@@ -139,10 +183,10 @@ namespace Entidades
         /// <returns>Devuelve el DOUBLE ingresado si strNumero es numérico, caso contrario devuelve 0.</returns>
         private static double ValidarOperando(string strNumero)
         {
-            double operadorValido;
-            if(!double.TryParse(strNumero, out operadorValido))
+            double operadorValido = 0;
+            if(double.TryParse(strNumero, out operadorValido))
             {
-                operadorValido = 0;
+                return operadorValido;
             }
             return operadorValido;
         }
