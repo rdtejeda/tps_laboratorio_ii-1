@@ -22,10 +22,10 @@ namespace Entidades
         }
 
         /// <summary>
-        /// 
+        /// Convierte un string BINARIO en string DECIMAL
         /// </summary>
-        /// <param name="binario"></param>
-        /// <returns></returns>
+        /// <param name="binario">String que contiene un nro binario</param>
+        /// <returns>Devuelve el valor Decimal en formato String o "Valor invalido" si no se pudo convertir</returns>
         public static string BinarioDecimal(string binario)
         {
             string nroDecimal = "Valor inválido";
@@ -55,8 +55,6 @@ namespace Entidades
         {
             int valorAbsoluto = (int)Math.Round(Math.Abs(numero));
             string binario = String.Empty;
-            //double cociente = valorAbsoluto;
-            //double resto;
             int cociente = valorAbsoluto;
             int resto;
             if (cociente >= 0)
@@ -77,20 +75,24 @@ namespace Entidades
         }
 
         /// <summary>
-        /// 
+        /// Convierte un STRING Decimal a STRING Binario
         /// </summary>
-        /// <param name="numero"></param>
-        /// <returns></returns>
+        /// <param name="numero">Numero a convertir</param>
+        /// <returns>Devuelve un STRING BINARIO con el nro ingresado, o "Valor Invalido" si error.</returns>
         public static string DecimalBinario(string numero)
         {
-            return "";
+            string decimalBinario = string.Empty;
+            double convertirNumero;
+            double.TryParse(numero, out convertirNumero);
+            decimalBinario = DecimalBinario(convertirNumero);
+            return decimalBinario;
         }
 
         /// <summary>
-        /// 
+        /// Valida si el STRING recibido es un nro Binario
         /// </summary>
-        /// <param name="binario"></param>
-        /// <returns></returns>
+        /// <param name="binario">Valor a validar</param>
+        /// <returns>True si es Binario, o False.</returns>
         private static bool EsBinario(string binario)
         {
             bool esBinario = true;
@@ -139,8 +141,7 @@ namespace Entidades
         /// <returns>Devuelve resultado RESTA: Tipo DOUBLE</returns>
         public static double operator -(Operando n1, Operando n2)
         {
-            //double resultado = double.MinValue;
-            return 1;
+            return n1.numero - n2.numero; ;
         }
 
         /// <summary>
@@ -151,7 +152,7 @@ namespace Entidades
         /// <returns>Devuelve resultado PRODUCTO: Tipo DOUBLE</returns>
         public static double operator *(Operando n1, Operando n2)
         {
-            return 1;
+            return n1.numero * n2.numero;
         }
 
         /// <summary>
@@ -159,10 +160,17 @@ namespace Entidades
         /// </summary>
         /// <param name="n1">Numero 1: Tipo OPERANDO</param>
         /// <param name="n2">Numero 2: Tipo OPERANDO</param>
-        /// <returns>Devuelve resultado COCIENTE: Tipo DOUBLE</returns>
+        /// <returns>Devuelve resultado COCIENTE: Tipo DOUBLE. Division por CERO = DOUBLE.MINVALUE</returns>
         public static double operator /(Operando n1, Operando n2)
         {
-            return 1;
+            if(n2.numero == 0)
+            {
+                return double.MinValue;
+            }
+            else
+            {
+                return n1.numero / n2.numero;
+            }
         }
 
         /// <summary>
@@ -173,7 +181,7 @@ namespace Entidades
         /// <returns>Devuelve resultado SUMA: Tipo DOUBLE</returns>
         public static double operator +(Operando n1, Operando n2)
         {
-            return 1;
+            return n1.numero + n2.numero;
         }
 
         /// <summary>
