@@ -28,7 +28,7 @@ namespace Entidades
         /// <returns>Devuelve el valor Decimal en formato String o "Valor invalido" si no se pudo convertir</returns>
         public static string BinarioDecimal(string binario)
         {
-            string nroDecimal = "Valor inválido";
+            string nroDecimal = "Valor Inválido";
             double doubleDecimal = 0;
             int caracteres = binario.Length;
             if (EsBinario(binario))
@@ -108,7 +108,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Constructor por defecto sin parámetros, setea el valor en CERO.
+        /// Constructor por defecto sin parámetros, inicializa la instancia del objeto y setea el valor en CERO.
         /// </summary>
         public Operando() :this(0)
         {
@@ -116,12 +116,12 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Consrtuctor con Parámetro (recibe DOUBLE)
+        /// Consrtuctor con Parámetros, inicializa el valor del objeto con el nro indicado
         /// </summary>
         /// <param name="numero">Valor a inicializar en el atributo NUMERO de la clase</param>
         public Operando(double numero)
         {
-            this.numero = numero;
+            Numero = numero.ToString();
         }
 
         /// <summary>

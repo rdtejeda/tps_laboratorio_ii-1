@@ -38,9 +38,22 @@ namespace MiCalculadora
             string numeroUno = this.txtNumero1.Text;
             string numeroDos = this.txtNumero2.Text;
             string operacion = this.cmbOperador.GetItemText(this.cmbOperador.SelectedItem);
+            double resultado;
             string calculadora;
-            string resultado = Operar(numeroUno, numeroDos, operacion).ToString();
-            this.lblResultado.Text = resultado;
+            double numeroUnoValido;
+            double numeroDosValido;
+            resultado = Operar(numeroUno, numeroDos, operacion);
+            this.lblResultado.Text = resultado.ToString();
+
+            if(!double.TryParse(numeroUno, out numeroUnoValido))
+            {
+                numeroUno = "0";
+            }
+            if(!double.TryParse(numeroDos, out numeroDosValido))
+            {
+                numeroDos = "0";
+            }
+
             calculadora = $"{numeroUno} {operacion} {numeroDos} = {resultado}";
             this.lstOperaciones.Items.Add(calculadora);
         }
@@ -76,7 +89,7 @@ namespace MiCalculadora
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
             string resultado = this.lblResultado.Text;
-            if (resultado != "Resultado")
+            if (resultado != "")
             {
                 resultado = Operando.DecimalBinario(resultado);
                 this.lblResultado.Text = resultado;
@@ -92,7 +105,7 @@ namespace MiCalculadora
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             string resultado = this.lblResultado.Text;
-            if (resultado != "Resultado")
+            if (resultado != "")
             {
                 resultado = Operando.BinarioDecimal(resultado);
                 this.lblResultado.Text = resultado;
@@ -115,9 +128,11 @@ namespace MiCalculadora
         private void Limpiar()
         {
             this.txtNumero1.Text = String.Empty;
-            //this.cmbOperador.Items.Clear();
-            //this.cmbOperador.Items.AddRange(new string[] { "", "+", "-", "/", "*" });
-            //this.cmbOperador.ResetText();
+            this.cmbOperador.Items.Clear();
+            this.cmbOperador.Items.Add("+");
+            this.cmbOperador.Items.Add("-");
+            this.cmbOperador.Items.Add("/");
+            this.cmbOperador.Items.Add("*");
             this.cmbOperador.Text = String.Empty;
             this.txtNumero2.Text = String.Empty;
             this.lblResultado.Text = String.Empty;
@@ -133,7 +148,6 @@ namespace MiCalculadora
         private static double Operar(string numero1, string numero2, string operador)
         {
             double resultado;
-            
             Operando numeroUno = new Operando(numero1);
             Operando numeroDos = new Operando(numero2);
             char operacion = Convert.ToChar(operador);
