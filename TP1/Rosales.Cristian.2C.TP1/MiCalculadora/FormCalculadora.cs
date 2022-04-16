@@ -93,7 +93,7 @@ namespace MiCalculadora
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
             string resultado = this.lblResultado.Text;
-            if (resultado != "")
+            if (resultado != "" && resultado != double.MinValue.ToString())
             {
                 resultado = Operando.DecimalBinario(resultado);
                 this.lblResultado.Text = resultado;
@@ -109,7 +109,7 @@ namespace MiCalculadora
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             string resultado = this.lblResultado.Text;
-            if (resultado != "")
+            if (resultado != "" && resultado != double.MinValue.ToString())
             {
                 resultado = Operando.BinarioDecimal(resultado);
                 this.lblResultado.Text = resultado;
@@ -139,7 +139,7 @@ namespace MiCalculadora
             this.cmbOperador.Items.Add("*");
             this.cmbOperador.Text = String.Empty;
             this.txtNumero2.Text = String.Empty;
-            this.lblResultado.Text = String.Empty;
+            this.lblResultado.Text = "0";
         }
 
         /// <summary>
