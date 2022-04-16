@@ -53,6 +53,10 @@ namespace MiCalculadora
             {
                 numeroDos = "0";
             }
+            if(operacion != "+" && operacion != "-" && operacion != "*" && operacion != "/")
+            {
+                operacion = "+";
+            }
 
             calculadora = $"{numeroUno} {operacion} {numeroDos} = {resultado}";
             this.lstOperaciones.Items.Add(calculadora);
@@ -150,7 +154,8 @@ namespace MiCalculadora
             double resultado;
             Operando numeroUno = new Operando(numero1);
             Operando numeroDos = new Operando(numero2);
-            char operacion = Convert.ToChar(operador);
+            char operacion;
+            Char.TryParse(operador, out operacion);
             
             resultado = Calculadora.Operar(numeroUno, numeroDos, operacion);
             
