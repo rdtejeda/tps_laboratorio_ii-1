@@ -118,6 +118,7 @@ namespace MiCalculadora
             //this.cmbOperador.Items.Clear();
             //this.cmbOperador.Items.AddRange(new string[] { "", "+", "-", "/", "*" });
             //this.cmbOperador.ResetText();
+            this.cmbOperador.Text = String.Empty;
             this.txtNumero2.Text = String.Empty;
             this.lblResultado.Text = String.Empty;
         }
