@@ -121,11 +121,11 @@
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(428, 9);
+            this.lblResultado.Location = new System.Drawing.Point(408, 9);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(38, 15);
+            this.lblResultado.Size = new System.Drawing.Size(59, 15);
             this.lblResultado.TabIndex = 8;
-            this.lblResultado.Text = "label1";
+            this.lblResultado.Text = "Resultado";
             // 
             // lstOperaciones
             // 
