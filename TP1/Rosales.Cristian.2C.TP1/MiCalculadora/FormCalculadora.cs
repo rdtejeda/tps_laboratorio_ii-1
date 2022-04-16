@@ -155,7 +155,7 @@ namespace MiCalculadora
             Operando numeroUno = new Operando(numero1);
             Operando numeroDos = new Operando(numero2);
             char operacion;
-            Char.TryParse(operador, out operacion);
+            char.TryParse(operador, out operacion);
             
             resultado = Calculadora.Operar(numeroUno, numeroDos, operacion);
             
