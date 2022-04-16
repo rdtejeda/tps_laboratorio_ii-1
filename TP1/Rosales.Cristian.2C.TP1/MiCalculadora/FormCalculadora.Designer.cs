@@ -126,6 +126,7 @@
             this.lblResultado.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblResultado.Size = new System.Drawing.Size(250, 25);
             this.lblResultado.TabIndex = 8;
+            this.lblResultado.Text = "lblResultado";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lstOperaciones
