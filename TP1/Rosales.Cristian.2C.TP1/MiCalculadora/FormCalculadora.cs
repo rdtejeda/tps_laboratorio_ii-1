@@ -19,7 +19,7 @@ namespace MiCalculadora
         }
 
         /// <summary>
-        /// Al iniciar la calculadora limpia los valores existentes
+        /// Al cargar la calculadora limpia los valores existentes
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -29,7 +29,7 @@ namespace MiCalculadora
         }
 
         /// <summary>
-        /// Al hacer Click en el botón operar toma los valores de los txtBoxs y CmbBox. Ejecuta el cálculo, muestra el resultado en el lblResultado y publica la linea en el listBox.
+        /// Al hacer Click en el botón Operar toma los valores de los txtBoxs y CmbBox. Ejecuta el cálculo, muestra el resultado en el lblResultado y publica la linea en el listBox.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -73,7 +73,7 @@ namespace MiCalculadora
         }
 
         /// <summary>
-        /// Valida si el usuario está seguro de salir o no.
+        /// Valida si el usuario está seguro de salir o no y cierra el Form.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
