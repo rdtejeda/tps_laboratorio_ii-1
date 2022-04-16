@@ -92,7 +92,7 @@ namespace Entidades
         /// Valida si el STRING recibido es un nro Binario
         /// </summary>
         /// <param name="binario">Valor a validar</param>
-        /// <returns>True si es Binario, o False.</returns>
+        /// <returns>True si es Binario sino False.</returns>
         private static bool EsBinario(string binario)
         {
             bool esBinario = true;
@@ -108,7 +108,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Constructor por defecto sin parámetros, setea el valor por defecto en CERO.
+        /// Constructor por defecto sin parámetros, setea el valor en CERO.
         /// </summary>
         public Operando() :this(0)
         {
