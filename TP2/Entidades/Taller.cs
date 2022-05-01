@@ -113,7 +113,7 @@ namespace Entidades
         {
             foreach (Vehiculo v in taller.vehiculos)
             {
-                if (v == vehiculo || taller.espacioDisponible == 0 || taller.espacioDisponible == taller.vehiculos.Count)
+                if (v == vehiculo || taller.espacioDisponible == 0 || taller.espacioDisponible < taller.vehiculos.Count+1)
                 {
                     return taller;
                 }
