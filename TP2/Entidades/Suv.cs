@@ -15,7 +15,7 @@ namespace Entidades
         /// <param name="chasis">Base: Chasis del SUV</param>
         /// <param name="color">Base: Color del SUV</param>
         public Suv(EMarca marca, string chasis, ConsoleColor color)
-            : base(chasis, marca, color)
+                    : base(chasis, marca, color)
         {
 
         }
@@ -27,7 +27,7 @@ namespace Entidades
         {
             get
             {
-                return Vehiculo.ETamanio.Grande;
+                return ETamanio.Grande;
             }
         }
 
@@ -40,8 +40,8 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SUV");
-            sb.AppendLine((string)this);
-            sb.AppendFormat("TAMAÑO : {0}",this.Tamanio.ToString());
+            sb.AppendLine(base.Mostrar());
+            sb.AppendLine($"TAMAÑO : {this.Tamanio}");
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 

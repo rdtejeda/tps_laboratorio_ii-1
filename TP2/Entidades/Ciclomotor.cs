@@ -14,7 +14,8 @@ namespace Entidades
         /// <param name="marca">Base: Chasis</param>
         /// <param name="chasis">Base: Marca</param>
         /// <param name="color">Base: Color</param>
-        public Ciclomotor(EMarca marca, string chasis, ConsoleColor color):base(chasis,marca,color)
+        public Ciclomotor(EMarca marca, string chasis, ConsoleColor color)
+                        :base(chasis,marca,color)
         {
 
         }
@@ -26,7 +27,7 @@ namespace Entidades
         {
             get
             {
-                return Vehiculo.ETamanio.Chico;
+                return ETamanio.Chico;
             }
         }
 
@@ -39,8 +40,8 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("CICLOMOTOR");
-            sb.AppendLine((string)this);
-            sb.AppendFormat("TAMAÑO : {0}", this.Tamanio.ToString());
+            sb.AppendLine(base.Mostrar());
+            sb.AppendLine($"TAMAÑO : {this.Tamanio}");
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 

@@ -43,9 +43,9 @@ namespace Entidades
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
         /// <returns></returns>
-        public new string ToString()
+        public override string ToString()
         {
-            return Taller.Listar(this, Taller.ETipo.Todos);
+            return Listar(this, ETipo.Todos);
         }
         #endregion
 
@@ -64,6 +64,7 @@ namespace Entidades
 
             sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", taller.vehiculos.Count, taller.espacioDisponible);
             sb.AppendLine("");
+
             foreach (Vehiculo v in taller.vehiculos)
             {
                 switch (tipo)
@@ -92,20 +93,17 @@ namespace Entidades
         /// </summary>
         /// <param name="taller">Objeto donde se agregará el elemento</param>
         /// <param name="vehiculo">Objeto a agregar</param>
-        /// <returns></returns>
+        /// <returns>Taller con 1 vehiculo mas si se pudo agregar o igual si no.</returns>
         public static Taller operator +(Taller taller, Vehiculo vehiculo)
         {
-            if(taller.espacioDisponible > 0 && taller.vehiculos.Count() < taller.espacioDisponible)
+            foreach (Vehiculo v in taller.vehiculos)
             {
-                foreach (Vehiculo v in taller.vehiculos)
+                if (v == vehiculo || taller.espacioDisponible == 0 || taller.espacioDisponible == taller.vehiculos.Count)
                 {
-                    if (v == vehiculo)
-                    {
-                        return taller;
-                    }
+                    return taller;
                 }
-                taller.vehiculos.Add(vehiculo);
             }
+            taller.vehiculos.Add(vehiculo);
             return taller;
         }
         /// <summary>
@@ -113,18 +111,15 @@ namespace Entidades
         /// </summary>
         /// <param name="taller">Objeto donde se quitará el elemento</param>
         /// <param name="vehiculo">Objeto a quitar</param>
-        /// <returns></returns>
+        /// <returns>Taller con 1 vehiculo menos si se pudo restar o igual si no.</returns>
         public static Taller operator -(Taller taller, Vehiculo vehiculo)
         {
-            if(taller.espacioDisponible > 0 && taller.vehiculos.Count() > 0)
+            foreach (Vehiculo v in taller.vehiculos)
             {
-                foreach (Vehiculo v in taller.vehiculos)
+                if (v == vehiculo)
                 {
-                    if (v == vehiculo)
-                    {
-                        taller.vehiculos.Remove(vehiculo);
-                        break;
-                    }
+                    taller.vehiculos.Remove(v);
+                    break;
                 }
             }
             return taller;
