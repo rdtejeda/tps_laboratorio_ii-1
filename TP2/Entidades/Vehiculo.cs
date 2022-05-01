@@ -55,17 +55,14 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            //sb.AppendLine("CHASIS: ");// {0}\r\n");
-            //sb.AppendLine(p.chasis);
-            //sb.AppendLine("MARCA : ");// {0}\r\n");
-            //sb.AppendLine(p.marca.ToString());
-            //sb.AppendLine("COLOR : ");// {0}\r\n");
-            //sb.AppendLine(p.color.ToString());
-            //sb.AppendLine("---------------------");
-            sb.AppendLine("CHASIS: "+ p.chasis);
-            sb.AppendLine("MARCA : "+ p.marca.ToString());
-            sb.AppendLine("COLOR : "+ p.color.ToString());
+            sb.AppendFormat("CHASIS: {0}\r\n", p.chasis);
+            sb.AppendFormat("MARCA : {0}\r\n", p.marca.ToString());
+            sb.AppendFormat("COLOR : {0}\r\n", p.color.ToString());
             sb.AppendLine("---------------------");
+            //sb.AppendFormat("CHASIS: {0}\r\n",p.chasis);
+            //sb.AppendLine("MARCA : "+ p.marca.ToString());
+            //sb.AppendLine("COLOR : "+ p.color.ToString());
+            //sb.AppendLine("---------------------");
 
             return sb.ToString();
         }

@@ -16,7 +16,7 @@ namespace Entidades
 
         public enum ETipo
         {
-            Ciclomotor, Sedan, SUV, Todos
+            SUV, Ciclomotor, Sedan, Todos
         }
 
         #region "Constructores"
@@ -43,9 +43,9 @@ namespace Entidades
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
         /// <returns></returns>
-        public override string ToString()
+        public new string ToString()
         {
-            return Taller.Listar(this, ETipo.Todos);
+            return Taller.Listar(this, Taller.ETipo.Todos);
         }
         #endregion
 
@@ -82,7 +82,6 @@ namespace Entidades
                         break;
                 }
             }
-
             return sb.ToString();
         }
         #endregion
@@ -96,15 +95,17 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator +(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller.vehiculos)
+            if(taller.espacioDisponible > 0 && taller.vehiculos.Count() < taller.espacioDisponible)
             {
-                if (v == vehiculo)
+                foreach (Vehiculo v in taller.vehiculos)
                 {
-                    return taller;
+                    if (v == vehiculo)
+                    {
+                        return taller;
+                    }
                 }
+                taller.vehiculos.Add(vehiculo);
             }
-
-            taller.vehiculos.Add(vehiculo);
             return taller;
         }
         /// <summary>
@@ -115,14 +116,17 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator -(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller.vehiculos)
+            if(taller.espacioDisponible > 0 && taller.vehiculos.Count() > 0)
             {
-                if (v == vehiculo)
+                foreach (Vehiculo v in taller.vehiculos)
                 {
-                    break;
+                    if (v == vehiculo)
+                    {
+                        taller.vehiculos.Remove(vehiculo);
+                        break;
+                    }
                 }
             }
-
             return taller;
         }
         #endregion
