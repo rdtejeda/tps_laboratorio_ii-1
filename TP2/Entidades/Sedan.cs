@@ -8,17 +8,18 @@ using System.Drawing;
 
 namespace Entidades
 {
-    class Sedan : Vehiculo
+    public class Sedan : Vehiculo
     {
         public enum ETipo { CuatroPuertas, CincoPuertas }
-        ETipo tipo;
+        private ETipo tipo;
 
         /// <summary>
+        /// Consructor con parametros, hereda de Vehiculo (clase base)
         /// Por defecto, TIPO será CuatroPuertas
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="chasis"></param>
-        /// <param name="color"></param>
+        /// <param name="marca">Base: Chasis</param>
+        /// <param name="chasis">Base: Marca</param>
+        /// <param name="color">Base: Color</param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color)
             : base(chasis, marca, color)
         {
@@ -26,28 +27,44 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Sedan son 'Mediano'
+        /// Constructor con parametros que recibo el TIPO
         /// </summary>
-        protected override short Tamanio
+        /// <param name="marca">Base:Marca</param>
+        /// <param name="chasis">Base: Chasis</param>
+        /// <param name="color">Base: Color</param>
+        /// <param name="tipo">Tipo se recibe</param>
+        public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo tipo)
+            :base(chasis, marca, color)
+        {
+            this.tipo = tipo;
+        }
+
+        /// <summary>
+        /// Propiedad Tamanio, Sedan son 'Mediano'
+        /// </summary>
+        protected override ETamanio Tamanio
         {
             get
             {
-                return this.Tamanio;
+                return Vehiculo.ETamanio.Mediano;
             }
         }
 
+        /// <summary>
+        /// Metodo Mostrar SEDAN
+        /// </summary>
+        /// <returns>Devuelve STRING con Tipo de Vehiculo y los atributos del objeto</returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SEDAN");
-            sb.AppendLine(this);
-            sb.AppendLine("TAMAÑO : {0}", this.Tamanio);
-            sb.AppendLine("TIPO : " + this.tipo);
+            sb.AppendLine((string)this);
+            sb.AppendLine("TAMAÑO : "+this.Tamanio.ToString()+"TIPO : " + this.tipo);
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 
-            return sb;
+            return sb.ToString();
         }
     }
 }

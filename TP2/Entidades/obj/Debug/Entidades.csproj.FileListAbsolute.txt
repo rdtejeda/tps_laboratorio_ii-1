@@ -15,3 +15,5 @@ D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP2\Entidade
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.dll
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.pdb
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP2\Entidades\bin\Debug\Entidades.dll
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP2\Entidades\bin\Debug\Entidades.pdb

@@ -9,21 +9,30 @@ namespace Entidades
     /// <summary>
     /// No podrá tener clases heredadas.
     /// </summary>
-    public class Taller
+    public sealed class Taller
     {
-        List<Vehiculo> vehiculos;
-        int espacioDisponible;
+        private List<Vehiculo> vehiculos;
+        private int espacioDisponible;
+
         public enum ETipo
         {
-            Moto, Automovil, Camioneta, Todos
+            Ciclomotor, Sedan, SUV, Todos
         }
 
         #region "Constructores"
+        /// <summary>
+        /// Constructor por defecto, inicializa la lista de Vehiculos para Taller.
+        /// </summary>
         private Taller()
         {
             this.vehiculos = new List<Vehiculo>();
         }
-        public Taller(int espacioDisponible)
+
+        /// <summary>
+        /// Constructor con Parametros publico, crea un Taller y le asigna el espacio disponible
+        /// </summary>
+        /// <param name="espacioDisponible"></param>
+        public Taller(int espacioDisponible):this()
         {
             this.espacioDisponible = espacioDisponible;
         }
@@ -34,7 +43,7 @@ namespace Entidades
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
         /// <returns></returns>
-        public string ToString()
+        public override string ToString()
         {
             return Taller.Listar(this, ETipo.Todos);
         }
@@ -48,8 +57,8 @@ namespace Entidades
         /// </summary>
         /// <param name="taller">Elemento a exponer</param>
         /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
-        /// <returns></returns>
-        public string Listar(Taller taller, ETipo tipo)
+        /// <returns>String con toda la info</returns>
+        public static string Listar(Taller taller, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -59,13 +68,13 @@ namespace Entidades
             {
                 switch (tipo)
                 {
-                    case ETipo.Camioneta:
+                    case ETipo.SUV:
                         sb.AppendLine(v.Mostrar());
                         break;
-                    case ETipo.Moto:
+                    case ETipo.Ciclomotor:
                         sb.AppendLine(v.Mostrar());
                         break;
-                    case ETipo.Automovil:
+                    case ETipo.Sedan:
                         sb.AppendLine(v.Mostrar());
                         break;
                     default:
@@ -74,7 +83,7 @@ namespace Entidades
                 }
             }
 
-            return sb;
+            return sb.ToString();
         }
         #endregion
 
@@ -87,10 +96,12 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator +(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller)
+            foreach (Vehiculo v in taller.vehiculos)
             {
                 if (v == vehiculo)
+                {
                     return taller;
+                }
             }
 
             taller.vehiculos.Add(vehiculo);
@@ -104,7 +115,7 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator -(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller)
+            foreach (Vehiculo v in taller.vehiculos)
             {
                 if (v == vehiculo)
                 {
