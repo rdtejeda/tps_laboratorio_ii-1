@@ -51,6 +51,10 @@ namespace Entidades
             return (string)this;
         }
 
+        /// <summary>
+        /// Operador String
+        /// </summary>
+        /// <param name="p">Recibe un Vehiculo</param>
         public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();
@@ -64,7 +68,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Dos vehiculos son iguales si comparten el mismo chasis
+        /// Operador ==. Dos vehiculos son iguales si comparten el mismo chasis
         /// </summary>
         /// <param name="v1">Vehiculo a comparar</param>
         /// <param name="v2">Vehiculo a comparar</param>
@@ -75,7 +79,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Dos vehiculos son distintos si su chasis es distinto
+        /// Operador --. Dos vehiculos son distintos si su chasis es distinto
         /// </summary>
         /// <param name="v1">Vehiculo a Comparar</param>
         /// <param name="v2">Vehiculo a Comparar</param>
