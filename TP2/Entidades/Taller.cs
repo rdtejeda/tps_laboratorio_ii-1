@@ -20,6 +20,7 @@ namespace Entidades
         }
 
         #region "Constructores"
+
         /// <summary>
         /// Constructor por defecto, inicializa la lista de Vehiculos para Taller.
         /// </summary>
@@ -36,9 +37,11 @@ namespace Entidades
         {
             this.espacioDisponible = espacioDisponible;
         }
+
         #endregion
 
         #region "Sobrecargas"
+
         /// <summary>
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
@@ -47,6 +50,7 @@ namespace Entidades
         {
             return Listar(this, ETipo.Todos);
         }
+
         #endregion
 
         #region "Métodos"
@@ -70,13 +74,22 @@ namespace Entidades
                 switch (tipo)
                 {
                     case ETipo.SUV:
-                        sb.AppendLine(v.Mostrar());
+                        if(v is Suv)
+                        {
+                            sb.AppendLine(v.Mostrar());
+                        }
                         break;
                     case ETipo.Ciclomotor:
-                        sb.AppendLine(v.Mostrar());
+                        if (v is Ciclomotor)
+                        {
+                            sb.AppendLine(v.Mostrar());
+                        }
                         break;
                     case ETipo.Sedan:
-                        sb.AppendLine(v.Mostrar());
+                        if (v is Sedan)
+                        {
+                            sb.AppendLine(v.Mostrar());
+                        }
                         break;
                     default:
                         sb.AppendLine(v.Mostrar());
@@ -85,9 +98,11 @@ namespace Entidades
             }
             return sb.ToString();
         }
+
         #endregion
 
         #region "Operadores"
+
         /// <summary>
         /// Agregará un elemento a la lista
         /// </summary>
@@ -106,6 +121,7 @@ namespace Entidades
             taller.vehiculos.Add(vehiculo);
             return taller;
         }
+
         /// <summary>
         /// Quitará un elemento de la lista
         /// </summary>
@@ -124,6 +140,7 @@ namespace Entidades
             }
             return taller;
         }
+
         #endregion
     }
 }
