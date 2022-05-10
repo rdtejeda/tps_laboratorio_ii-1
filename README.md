@@ -15,7 +15,7 @@ Materia: Laboratorio de Programación 2 | Lenguaje: C# | Comisión 2C - 1Q - 202
 ## TP 2 - Taller
 ### Descripción:
   - [Link](https://codeutnfra.github.io/programacion_2_laboratorio_2_apuntes/docs/evaluaciones/trabajos-practicos/tp-02/) al enunciado
-  - Situación:
+  - Situación: *Aprobado*
   - Temas:
       - Aplicación de Consola
       - Biblioteca de Clases
