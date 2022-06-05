@@ -8,23 +8,22 @@ namespace Biblioteca
 {
     public class Empleado : Persona
     {
+        private string sector;
         private DateTime fechaIngreso;
         private List<Trabajo> trabajosPendientes;
         private List<Trabajo> trabajosTerminados;
 
         /// <summary>
-        /// Consrtuctor con Parametros. Usa el de la clase BASE: Persona.
-        /// Instancio las dos listas de trabajos para el empleado.
+        /// Constructor con parametros. Usa el de la clase Base.
         /// </summary>
         /// <param name="dni"></param>
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
-        public Empleado (int dni, string nombre, string apellido, DateTime fechaIngreso) 
+        public Empleado(int dni, string nombre, string apellido, string sector, DateTime fechaIngreso) 
                         : base(dni, nombre, apellido)
         {
+            this.sector = sector;
             this.fechaIngreso = fechaIngreso;
-            this.trabajosPendientes = new List<Trabajo>();
-            this.trabajosTerminados = new List<Trabajo>();
         }
 
         /// <summary>

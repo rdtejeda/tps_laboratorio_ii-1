@@ -26,7 +26,6 @@ namespace Consola
             {
                 case 1:
                     Console.WriteLine("AM de AUTO");
-
                     break;
                 case 2:
                     Console.WriteLine("B DE AUTO");
@@ -39,7 +38,7 @@ namespace Consola
                     break;
             }
 
-
+            
             Console.ReadKey();
         
         }

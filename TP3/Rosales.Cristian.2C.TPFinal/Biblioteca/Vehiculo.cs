@@ -144,7 +144,7 @@ namespace Biblioteca
             sb.AppendLine($"Modelo: {this.Modelo}");
             sb.AppendLine($"Patente: {this.Patente}");
             sb.AppendLine($"Anio: {this.Anio}");
-            sb.AppendLine($"Anio: {this.Color}");
+            sb.AppendLine($"Color: {this.Color}");
             sb.AppendLine($"DNI Cliente: {this.DniCliente}");
             return sb.ToString();
         }
