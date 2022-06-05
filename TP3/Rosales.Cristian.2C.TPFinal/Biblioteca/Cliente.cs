@@ -14,8 +14,8 @@ namespace Biblioteca
         /// <param name="dni"></param>
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
-        public Cliente(int dni, string nombre, string apellido) 
-                       : base(dni, nombre, apellido)
+        public Cliente(int dni, string nombre, string apellido, string telefono, string mail) 
+                       : base(dni, nombre, apellido, telefono, mail)
         {
 
         }

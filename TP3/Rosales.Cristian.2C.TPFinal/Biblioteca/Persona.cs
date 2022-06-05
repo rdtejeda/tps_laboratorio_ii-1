@@ -11,6 +11,8 @@ namespace Biblioteca
         protected int dni;
         protected string nombre;
         protected string apellido;
+        protected string telefono;
+        protected string mail;
 
         /// <summary>
         /// Constructor con Parametros.
@@ -18,11 +20,13 @@ namespace Biblioteca
         /// <param name="dni"></param>
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
-        protected Persona(int dni, string nombre, string apellido)
+        protected Persona(int dni, string nombre, string apellido, string telefono, string mail)
         {
             this.dni = dni;
             this.nombre = nombre;
             this.apellido = apellido;
+            this.telefono = telefono;
+            this.mail = mail;
         }
 
         /// <summary>
@@ -48,6 +52,28 @@ namespace Biblioteca
         }
 
         /// <summary>
+        /// Prop Telefono. ReadOnly
+        /// </summary>
+        public string Telefono
+        {
+            get
+            {
+                return this.telefono;
+            }
+        }
+
+        /// <summary>
+        /// Prop Mail. ReadOnly
+        /// </summary>
+        public string Mail
+        {
+            get
+            {
+                return this.mail;
+            }
+        }
+
+        /// <summary>
         /// Override de ToString. Imprime todos los datos de la Persona.
         /// </summary>
         /// <returns></returns>
@@ -56,6 +82,8 @@ namespace Biblioteca
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Nombre y Apellido: {this.NombreCompleto}");
             sb.AppendLine($"DNI: {this.Dni}");
+            sb.AppendLine($"Telefono: {this.Telefono}");
+            sb.AppendLine($"E-mail: {this.Mail}");
             return base.ToString();
         }
     }

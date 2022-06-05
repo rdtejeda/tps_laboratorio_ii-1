@@ -24,8 +24,9 @@ namespace Biblioteca
         /// <param name="dni"></param>
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
-        public Empleado(int dni, string nombre, string apellido, Sector sector, DateTime fechaIngreso) 
-                        : base(dni, nombre, apellido)
+        public Empleado(int dni, string nombre, string apellido, Sector sector, DateTime fechaIngreso,
+                        string telefono, string mail) 
+                        : base(dni, nombre, apellido, telefono, mail)
         {
             this.sector = sector;
             this.fechaIngreso = fechaIngreso;

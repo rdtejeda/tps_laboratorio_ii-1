@@ -4,7 +4,7 @@ using System.Text;
 namespace Biblioteca
 {
     /// <summary>
-    /// Enum Color para todos los vehiculos
+    /// Enum Color para todos los vehiculos - MUDAR AL FORM DE ATENCION Y DEPOSITO
     /// </summary>
     public enum Color
     {
