@@ -3,14 +3,11 @@ using System.Text;
 
 namespace Biblioteca
 {
-    /// <summary>
     /// Enum Color para todos los vehiculos - MUDAR AL FORM DE ATENCION Y DEPOSITO
-    /// </summary>
     public enum Color
     {
         Blanco, Negro, Rojo, Azul, Gris, Verde
     }
-
     public abstract class Vehiculo
     {
         protected int dniCliente;

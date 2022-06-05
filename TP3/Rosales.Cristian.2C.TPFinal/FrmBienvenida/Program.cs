@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrmBienvenida
+namespace FrmStyloCar
 {
     internal static class Program
     {

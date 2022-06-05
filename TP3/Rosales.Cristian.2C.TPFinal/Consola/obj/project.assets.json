@@ -5,11 +5,24 @@
       "Biblioteca/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Excepciones": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Biblioteca.dll": {}
         },
         "runtime": {
           "bin/placeholder/Biblioteca.dll": {}
+        }
+      },
+      "Excepciones/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Excepciones.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Excepciones.dll": {}
         }
       }
     }
@@ -19,6 +32,11 @@
       "type": "project",
       "path": "../Biblioteca/Biblioteca.csproj",
       "msbuildProject": "../Biblioteca/Biblioteca.csproj"
+    },
+    "Excepciones/1.0.0": {
+      "type": "project",
+      "path": "../Excepciones/Excepciones.csproj",
+      "msbuildProject": "../Excepciones/Excepciones.csproj"
     }
   },
   "projectFileDependencyGroups": {

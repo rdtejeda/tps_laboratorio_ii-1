@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {}
+    "net5.0-windows7.0": {
+      "Biblioteca/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ExcepcionesPersonalizadas": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Biblioteca.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Biblioteca.dll": {}
+        }
+      },
+      "ExcepcionesPersonalizadas/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ExcepcionesPersonalizadas.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExcepcionesPersonalizadas.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Biblioteca/1.0.0": {
+      "type": "project",
+      "path": "../Biblioteca/Biblioteca.csproj",
+      "msbuildProject": "../Biblioteca/Biblioteca.csproj"
+    },
+    "ExcepcionesPersonalizadas/1.0.0": {
+      "type": "project",
+      "path": "../ExcepcionesPersonalizadas/ExcepcionesPersonalizadas.csproj",
+      "msbuildProject": "../ExcepcionesPersonalizadas/ExcepcionesPersonalizadas.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": []
+    "net5.0-windows7.0": [
+      "Biblioteca >= 1.0.0",
+      "ExcepcionesPersonalizadas >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\crisp\\.nuget\\packages\\": {}
@@ -13,9 +51,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\FrmBienvenida\\FrmBienvenida.csproj",
-      "projectName": "FrmBienvenida",
-      "projectPath": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\FrmBienvenida\\FrmBienvenida.csproj",
+      "projectUniqueName": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\FrmBienvenida\\FrmStyloCar.csproj",
+      "projectName": "FrmStyloCar",
+      "projectPath": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\FrmBienvenida\\FrmStyloCar.csproj",
       "packagesPath": "C:\\Users\\crisp\\.nuget\\packages\\",
       "outputPath": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\FrmBienvenida\\obj\\",
       "projectStyle": "PackageReference",
@@ -33,7 +71,14 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\Biblioteca\\Biblioteca.csproj": {
+              "projectPath": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\Biblioteca\\Biblioteca.csproj"
+            },
+            "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\ExcepcionesPersonalizadas\\ExcepcionesPersonalizadas.csproj": {
+              "projectPath": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\ExcepcionesPersonalizadas\\ExcepcionesPersonalizadas.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

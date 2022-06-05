@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "FrmBienvenida/1.0.0": {
+        "dependencies": {
+          "Biblioteca": "1.0.0",
+          "FrmEmpleados": "1.0.0"
+        },
+        "runtime": {
+          "FrmBienvenida.dll": {}
+        }
+      },
+      "Biblioteca/1.0.0": {
+        "runtime": {
+          "Biblioteca.dll": {}
+        }
+      },
+      "FrmEmpleados/1.0.0": {
+        "dependencies": {
+          "Biblioteca": "1.0.0"
+        },
+        "runtime": {
+          "FrmEmpleados.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FrmBienvenida/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Biblioteca/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FrmEmpleados/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

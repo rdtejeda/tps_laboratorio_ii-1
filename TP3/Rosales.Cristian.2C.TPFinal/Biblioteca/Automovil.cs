@@ -29,8 +29,7 @@ namespace Biblioteca
         /// <param name="patente"></param>
         /// <param name="idTrabajo"></param>
         /// <param name="flagTrabajoTerminado"></param>
-        public Automovil(int dniCliente, string marca, string modelo, int anio, 
-                        Color color, string patente, int idTrabajo,
+        public Automovil(int dniCliente, string marca, string modelo, int                   anio, Color color, string patente, int idTrabajo,
                         bool flagTrabajoTerminado, Diagnostico diagnostico) 
                         : base  (dniCliente, marca, modelo, anio,
                                 color, patente, idTrabajo, flagTrabajoTerminado)
