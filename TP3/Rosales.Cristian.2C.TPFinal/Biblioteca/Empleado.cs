@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Biblioteca
 {
+    public enum Sector
+    {
+        Chapa, Pintura, Lavado
+    }
+    
     public class Empleado : Persona
     {
-        private string sector;
+        private Sector sector;
         private DateTime fechaIngreso;
         private List<Trabajo> trabajosPendientes;
         private List<Trabajo> trabajosTerminados;
@@ -19,7 +24,7 @@ namespace Biblioteca
         /// <param name="dni"></param>
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
-        public Empleado(int dni, string nombre, string apellido, string sector, DateTime fechaIngreso) 
+        public Empleado(int dni, string nombre, string apellido, Sector sector, DateTime fechaIngreso) 
                         : base(dni, nombre, apellido)
         {
             this.sector = sector;
@@ -64,14 +69,31 @@ namespace Biblioteca
         }
 
         /// <summary>
+        /// Prop Sector. Get y Set.
+        /// </summary>
+        public Sector GetSetSector
+        {
+            get
+            {
+                return this.sector;
+            }
+            set
+            {
+                this.sector = value;
+            }
+        }
+
+        /// <summary>
         /// Override To String. Imprime los datos del empleado y sus trabajos.
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            //TERMINAR CON LA LOGICA DEL PARCIAL
-            //IMPRIME EL EMPLEDAO CON TODOS SUS TRABAJOS
-            return "COMPLETAR";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{base.ToString()}");
+            sb.AppendLine($"Fecha de Ingreso: {this.Fechaingreso}");
+            sb.AppendLine($"Sector: {this.GetSetSector}");
+            return sb.ToString();
         }
     }
 }
