@@ -9,13 +9,12 @@ namespace Biblioteca
 {
     public class Trabajo
     {
-        //private int idTrabajo;
         private DateTime fechaInicio;
         private DateTime fechaFin;
-        //private Cliente cliente;
         private bool trabajoTerminado;
         private Automovil auto;
         private bool seguro;
+        private Sector sector;
 
         /// <summary>
         /// Prop Fecha de inicio de trabajo. ReadOnly
@@ -37,26 +36,11 @@ namespace Biblioteca
             {
                 return this.fechaFin;
             }
+            set
+            {
+                this.fechaFin = value;
+            }
         }
-
-        ///// <summary>
-        ///// Prop Cliente. ReadOnly
-        ///// </summary>
-        //public Cliente Cliente
-        //{
-        //    get
-        //    {
-        //        return this.cliente;
-        //    }
-        //}
-
-        //public int IdTrabajo
-        //{
-        //    get
-        //    {
-        //        return this.idTrabajo;
-        //    }
-        //}
 
         /// <summary>
         /// Prop Trabajo Terminado. Recupera el flag y lo setea en True o Flalse.
@@ -78,13 +62,13 @@ namespace Biblioteca
         /// </summary>
         /// <param name="fechaInicio"></param>
         /// <param name="cliente"></param>
-        public Trabajo(DateTime fechaInicio, /*Cliente cliente*/Automovil auto, bool seguro)
+        public Trabajo(DateTime fechaInicio, Automovil auto, bool seguro, Sector sector)
         {
-            //this.idTrabajo = IdTrabajo;
             this.fechaInicio = fechaInicio;
             this.auto = auto;
-            //this.cliente = cliente;
             this.seguro = seguro;
+            this.sector = sector;
+            this.fechaFin = DateTime.MinValue;
         }
 
         /// <summary>
@@ -96,6 +80,29 @@ namespace Biblioteca
             {
                 return this.auto;
             }
+        }
+
+        public Sector Sector
+        {
+            get
+            {
+                return this.sector;
+            }
+            set
+            {
+                this.sector = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Fecha Inicio: {this.FechaInicio}");
+            sb.AppendLine($"Automovil | Marca: {auto.Marca}");
+            sb.AppendLine($"Automovil | Modelo: {auto.Modelo}");
+            sb.AppendLine($"Patente: {auto.Patente}");
+            sb.AppendLine($"Sector: {this.Sector}");
+            return sb.ToString();
         }
 
 

@@ -13,3 +13,18 @@ D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\Biblioteca\bin\Debug\net5.0\ExcepcionesPersonalizadas.dll
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\Biblioteca\bin\Debug\net5.0\ExcepcionesPersonalizadas.pdb
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\Biblioteca.csproj.CopyComplete
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\bin\Debug\net5.0\Biblioteca.deps.json
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\bin\Debug\net5.0\Biblioteca.dll
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\bin\Debug\net5.0\Biblioteca.pdb
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\bin\Debug\net5.0\ExcepcionesPersonalizadas.dll
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\bin\Debug\net5.0\ExcepcionesPersonalizadas.pdb
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\Biblioteca.csproj.AssemblyReference.cache
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\Biblioteca.AssemblyInfoInputs.cache
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\Biblioteca.AssemblyInfo.cs
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\Biblioteca.csproj.CoreCompileInputs.cache
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\Biblioteca.csproj.CopyComplete
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\Biblioteca.dll
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\refint\Biblioteca.dll
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\Biblioteca.pdb
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\Biblioteca\obj\Debug\net5.0\ref\Biblioteca.dll

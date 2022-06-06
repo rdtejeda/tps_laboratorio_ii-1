@@ -81,9 +81,6 @@ namespace Biblioteca
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Nombre y Apellido: {this.NombreCompleto}");
-            sb.AppendLine($"DNI: {this.Dni}");
-            sb.AppendLine($"Telefono: {this.Telefono}");
-            sb.AppendLine($"E-mail: {this.Mail}");
             return base.ToString();
         }
     }

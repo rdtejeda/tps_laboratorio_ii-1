@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca", "Biblioteca\Biblioteca.csproj", "{8CEC6609-45D0-49A2-93F7-9CB3983094A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca", "Biblioteca\Biblioteca.csproj", "{8CEC6609-45D0-49A2-93F7-9CB3983094A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmStyloCar", "FrmBienvenida\FrmStyloCar.csproj", "{4A934E86-2855-4D62-A365-CE7CE3C33C4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrmStyloCar", "FrmBienvenida\FrmStyloCar.csproj", "{4A934E86-2855-4D62-A365-CE7CE3C33C4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcepcionesPersonalizadas", "ExcepcionesPersonalizadas\ExcepcionesPersonalizadas.csproj", "{D0890B5E-71ED-45C5-B461-0FB54BFB169E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcepcionesPersonalizadas", "ExcepcionesPersonalizadas\ExcepcionesPersonalizadas.csproj", "{D0890B5E-71ED-45C5-B461-0FB54BFB169E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestStyloCar", "StyloCarTest\TestStyloCar.csproj", "{675A42F1-A7B8-476B-97B2-FA0D4548BF61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D0890B5E-71ED-45C5-B461-0FB54BFB169E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0890B5E-71ED-45C5-B461-0FB54BFB169E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0890B5E-71ED-45C5-B461-0FB54BFB169E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675A42F1-A7B8-476B-97B2-FA0D4548BF61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675A42F1-A7B8-476B-97B2-FA0D4548BF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675A42F1-A7B8-476B-97B2-FA0D4548BF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675A42F1-A7B8-476B-97B2-FA0D4548BF61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

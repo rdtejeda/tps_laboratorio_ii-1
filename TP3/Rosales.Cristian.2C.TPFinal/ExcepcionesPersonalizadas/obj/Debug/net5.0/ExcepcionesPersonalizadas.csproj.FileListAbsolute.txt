@@ -10,3 +10,15 @@ D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\refint\ExcepcionesPersonalizadas.dll
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\ExcepcionesPersonalizadas.pdb
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\ref\ExcepcionesPersonalizadas.dll
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\bin\Debug\net5.0\ExcepcionesPersonalizadas.deps.json
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\bin\Debug\net5.0\ExcepcionesPersonalizadas.dll
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\bin\Debug\net5.0\ExcepcionesPersonalizadas.pdb
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\ExcepcionesPersonalizadas.csproj.AssemblyReference.cache
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\ExcepcionesPersonalizadas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\ExcepcionesPersonalizadas.AssemblyInfoInputs.cache
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\ExcepcionesPersonalizadas.AssemblyInfo.cs
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\ExcepcionesPersonalizadas.csproj.CoreCompileInputs.cache
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\ExcepcionesPersonalizadas.dll
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\refint\ExcepcionesPersonalizadas.dll
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\ExcepcionesPersonalizadas.pdb
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\ExcepcionesPersonalizadas\obj\Debug\net5.0\ref\ExcepcionesPersonalizadas.dll

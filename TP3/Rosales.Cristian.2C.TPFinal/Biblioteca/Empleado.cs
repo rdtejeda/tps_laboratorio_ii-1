@@ -68,7 +68,6 @@ namespace Biblioteca
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"{base.ToString()}");
-            sb.AppendLine($"Fecha de Ingreso: {this.Fechaingreso}");
             sb.AppendLine($"Sector: {this.GetSetSector}");
             return sb.ToString();
         }

@@ -30,18 +30,18 @@
         {
             this.btnIngresoAuto = new System.Windows.Forms.Button();
             this.btnEgresoAuto = new System.Windows.Forms.Button();
-            this.btnMateriales = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtHora = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnInformes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIngresoAuto
             // 
-            this.btnIngresoAuto.Location = new System.Drawing.Point(64, 213);
+            this.btnIngresoAuto.Location = new System.Drawing.Point(65, 144);
             this.btnIngresoAuto.Name = "btnIngresoAuto";
             this.btnIngresoAuto.Size = new System.Drawing.Size(230, 82);
             this.btnIngresoAuto.TabIndex = 0;
@@ -51,27 +51,17 @@
             // 
             // btnEgresoAuto
             // 
-            this.btnEgresoAuto.Location = new System.Drawing.Point(64, 301);
+            this.btnEgresoAuto.Location = new System.Drawing.Point(65, 232);
             this.btnEgresoAuto.Name = "btnEgresoAuto";
             this.btnEgresoAuto.Size = new System.Drawing.Size(230, 82);
-            this.btnEgresoAuto.TabIndex = 1;
+            this.btnEgresoAuto.TabIndex = 2;
             this.btnEgresoAuto.Text = "Egreso Auto";
             this.btnEgresoAuto.UseVisualStyleBackColor = true;
             this.btnEgresoAuto.Click += new System.EventHandler(this.btnEgresoAuto_Click);
             // 
-            // btnMateriales
-            // 
-            this.btnMateriales.Location = new System.Drawing.Point(334, 213);
-            this.btnMateriales.Name = "btnMateriales";
-            this.btnMateriales.Size = new System.Drawing.Size(230, 82);
-            this.btnMateriales.TabIndex = 2;
-            this.btnMateriales.Text = "Materiales";
-            this.btnMateriales.UseVisualStyleBackColor = true;
-            this.btnMateriales.Click += new System.EventHandler(this.btnMateriales_Click);
-            // 
             // btnEmpleados
             // 
-            this.btnEmpleados.Location = new System.Drawing.Point(334, 301);
+            this.btnEmpleados.Location = new System.Drawing.Point(320, 144);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(230, 82);
             this.btnEmpleados.TabIndex = 3;
@@ -116,23 +106,33 @@
             this.btnSalir.Location = new System.Drawing.Point(537, 406);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 8;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnInformes
+            // 
+            this.btnInformes.Location = new System.Drawing.Point(320, 232);
+            this.btnInformes.Name = "btnInformes";
+            this.btnInformes.Size = new System.Drawing.Size(230, 82);
+            this.btnInformes.TabIndex = 4;
+            this.btnInformes.Text = "Informes";
+            this.btnInformes.UseVisualStyleBackColor = true;
+            this.btnInformes.Click += new System.EventHandler(this.btnInformes_Click);
             // 
             // FrmBienvenida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.btnInformes);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtHora);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.btnEmpleados);
-            this.Controls.Add(this.btnMateriales);
             this.Controls.Add(this.btnEgresoAuto);
             this.Controls.Add(this.btnIngresoAuto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -153,12 +153,12 @@
 
         private System.Windows.Forms.Button btnIngresoAuto;
         private System.Windows.Forms.Button btnEgresoAuto;
-        private System.Windows.Forms.Button btnMateriales;
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtHora;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnInformes;
     }
 }

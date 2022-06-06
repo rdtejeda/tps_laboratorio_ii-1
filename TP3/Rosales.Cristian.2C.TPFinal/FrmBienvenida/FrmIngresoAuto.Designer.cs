@@ -38,8 +38,6 @@
             this.txtAnio = new System.Windows.Forms.TextBox();
             this.lblAnio = new System.Windows.Forms.Label();
             this.lblSeguro = new System.Windows.Forms.Label();
-            this.txtDni = new System.Windows.Forms.TextBox();
-            this.lblDni = new System.Windows.Forms.Label();
             this.txtPatente = new System.Windows.Forms.TextBox();
             this.lblPatente = new System.Windows.Forms.Label();
             this.btnIngresoAuto = new System.Windows.Forms.Button();
@@ -51,6 +49,8 @@
             this.lblDiagnostico = new System.Windows.Forms.Label();
             this.cmbColor = new System.Windows.Forms.ComboBox();
             this.cmbDiagnostico = new System.Windows.Forms.ComboBox();
+            this.txtDni = new System.Windows.Forms.TextBox();
+            this.lblDni = new System.Windows.Forms.Label();
             this.automovilBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.automovilBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gBoxIngresoAuto.SuspendLayout();
@@ -63,7 +63,7 @@
             this.btnVolver.Location = new System.Drawing.Point(537, 406);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 1;
+            this.btnVolver.TabIndex = 23;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
@@ -103,7 +103,7 @@
             // lblColor
             // 
             this.lblColor.AutoSize = true;
-            this.lblColor.Location = new System.Drawing.Point(326, 33);
+            this.lblColor.Location = new System.Drawing.Point(375, 33);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(39, 15);
             this.lblColor.TabIndex = 8;
@@ -111,15 +111,15 @@
             // 
             // txtAnio
             // 
-            this.txtAnio.Location = new System.Drawing.Point(220, 52);
+            this.txtAnio.Location = new System.Drawing.Point(114, 104);
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(100, 23);
-            this.txtAnio.TabIndex = 7;
+            this.txtAnio.TabIndex = 9;
             // 
             // lblAnio
             // 
             this.lblAnio.AutoSize = true;
-            this.lblAnio.Location = new System.Drawing.Point(220, 33);
+            this.lblAnio.Location = new System.Drawing.Point(114, 85);
             this.lblAnio.Name = "lblAnio";
             this.lblAnio.Size = new System.Drawing.Size(35, 15);
             this.lblAnio.TabIndex = 6;
@@ -133,28 +133,12 @@
             this.lblSeguro.Size = new System.Drawing.Size(0, 15);
             this.lblSeguro.TabIndex = 14;
             // 
-            // txtDni
-            // 
-            this.txtDni.Location = new System.Drawing.Point(114, 105);
-            this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(100, 23);
-            this.txtDni.TabIndex = 13;
-            // 
-            // lblDni
-            // 
-            this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(114, 86);
-            this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(70, 15);
-            this.lblDni.TabIndex = 12;
-            this.lblDni.Text = "DNI Cliente:";
-            // 
             // txtPatente
             // 
             this.txtPatente.Location = new System.Drawing.Point(8, 105);
             this.txtPatente.Name = "txtPatente";
             this.txtPatente.Size = new System.Drawing.Size(100, 23);
-            this.txtPatente.TabIndex = 11;
+            this.txtPatente.TabIndex = 7;
             // 
             // lblPatente
             // 
@@ -167,10 +151,10 @@
             // 
             // btnIngresoAuto
             // 
-            this.btnIngresoAuto.Location = new System.Drawing.Point(6, 181);
+            this.btnIngresoAuto.Location = new System.Drawing.Point(157, 197);
             this.btnIngresoAuto.Name = "btnIngresoAuto";
             this.btnIngresoAuto.Size = new System.Drawing.Size(206, 47);
-            this.btnIngresoAuto.TabIndex = 16;
+            this.btnIngresoAuto.TabIndex = 22;
             this.btnIngresoAuto.Text = "Confirmar Ingreso";
             this.btnIngresoAuto.UseVisualStyleBackColor = true;
             this.btnIngresoAuto.Click += new System.EventHandler(this.btnIngresoAuto_Click);
@@ -179,11 +163,11 @@
             // 
             this.gBoxIngresoAuto.Controls.Add(this.lblSector);
             this.gBoxIngresoAuto.Controls.Add(this.cmbSector);
+            this.gBoxIngresoAuto.Controls.Add(this.btnIngresoAuto);
             this.gBoxIngresoAuto.Controls.Add(this.lblDerivaSeguro);
             this.gBoxIngresoAuto.Controls.Add(this.cmbSeguro);
             this.gBoxIngresoAuto.Controls.Add(this.lblDiagnostico);
             this.gBoxIngresoAuto.Controls.Add(this.cmbColor);
-            this.gBoxIngresoAuto.Controls.Add(this.btnIngresoAuto);
             this.gBoxIngresoAuto.Controls.Add(this.cmbDiagnostico);
             this.gBoxIngresoAuto.Controls.Add(this.lblSeguro);
             this.gBoxIngresoAuto.Controls.Add(this.txtDni);
@@ -197,9 +181,9 @@
             this.gBoxIngresoAuto.Controls.Add(this.lblModelo);
             this.gBoxIngresoAuto.Controls.Add(this.txtMarca);
             this.gBoxIngresoAuto.Controls.Add(this.lblMarca);
-            this.gBoxIngresoAuto.Location = new System.Drawing.Point(62, 77);
+            this.gBoxIngresoAuto.Location = new System.Drawing.Point(57, 73);
             this.gBoxIngresoAuto.Name = "gBoxIngresoAuto";
-            this.gBoxIngresoAuto.Size = new System.Drawing.Size(477, 244);
+            this.gBoxIngresoAuto.Size = new System.Drawing.Size(512, 269);
             this.gBoxIngresoAuto.TabIndex = 17;
             this.gBoxIngresoAuto.TabStop = false;
             this.gBoxIngresoAuto.Text = "Ingreso Auto";
@@ -207,7 +191,7 @@
             // lblSector
             // 
             this.lblSector.AutoSize = true;
-            this.lblSector.Location = new System.Drawing.Point(326, 140);
+            this.lblSector.Location = new System.Drawing.Point(248, 33);
             this.lblSector.Name = "lblSector";
             this.lblSector.Size = new System.Drawing.Size(43, 15);
             this.lblSector.TabIndex = 22;
@@ -220,15 +204,15 @@
             this.cmbSector.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.cmbSector.Location = new System.Drawing.Point(326, 158);
+            this.cmbSector.Location = new System.Drawing.Point(248, 51);
             this.cmbSector.Name = "cmbSector";
             this.cmbSector.Size = new System.Drawing.Size(121, 23);
-            this.cmbSector.TabIndex = 21;
+            this.cmbSector.TabIndex = 13;
             // 
             // lblDerivaSeguro
             // 
             this.lblDerivaSeguro.AutoSize = true;
-            this.lblDerivaSeguro.Location = new System.Drawing.Point(326, 197);
+            this.lblDerivaSeguro.Location = new System.Drawing.Point(248, 90);
             this.lblDerivaSeguro.Name = "lblDerivaSeguro";
             this.lblDerivaSeguro.Size = new System.Drawing.Size(115, 15);
             this.lblDerivaSeguro.TabIndex = 20;
@@ -241,15 +225,15 @@
             this.cmbSeguro.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.cmbSeguro.Location = new System.Drawing.Point(326, 215);
+            this.cmbSeguro.Location = new System.Drawing.Point(248, 108);
             this.cmbSeguro.Name = "cmbSeguro";
             this.cmbSeguro.Size = new System.Drawing.Size(121, 23);
-            this.cmbSeguro.TabIndex = 19;
+            this.cmbSeguro.TabIndex = 17;
             // 
             // lblDiagnostico
             // 
             this.lblDiagnostico.AutoSize = true;
-            this.lblDiagnostico.Location = new System.Drawing.Point(326, 86);
+            this.lblDiagnostico.Location = new System.Drawing.Point(375, 90);
             this.lblDiagnostico.Name = "lblDiagnostico";
             this.lblDiagnostico.Size = new System.Drawing.Size(76, 15);
             this.lblDiagnostico.TabIndex = 18;
@@ -259,10 +243,10 @@
             // 
             this.cmbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbColor.FormattingEnabled = true;
-            this.cmbColor.Location = new System.Drawing.Point(326, 52);
+            this.cmbColor.Location = new System.Drawing.Point(375, 52);
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(121, 23);
-            this.cmbColor.TabIndex = 17;
+            this.cmbColor.TabIndex = 15;
             // 
             // cmbDiagnostico
             // 
@@ -271,10 +255,26 @@
             this.cmbDiagnostico.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.cmbDiagnostico.Location = new System.Drawing.Point(326, 104);
+            this.cmbDiagnostico.Location = new System.Drawing.Point(375, 108);
             this.cmbDiagnostico.Name = "cmbDiagnostico";
             this.cmbDiagnostico.Size = new System.Drawing.Size(121, 23);
-            this.cmbDiagnostico.TabIndex = 15;
+            this.cmbDiagnostico.TabIndex = 21;
+            // 
+            // txtDni
+            // 
+            this.txtDni.Location = new System.Drawing.Point(8, 158);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(100, 23);
+            this.txtDni.TabIndex = 11;
+            // 
+            // lblDni
+            // 
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(8, 139);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(70, 15);
+            this.lblDni.TabIndex = 12;
+            this.lblDni.Text = "DNI Cliente:";
             // 
             // automovilBindingSource
             // 
@@ -317,8 +317,6 @@
         private System.Windows.Forms.TextBox txtAnio;
         private System.Windows.Forms.Label lblAnio;
         private System.Windows.Forms.Label lblSeguro;
-        private System.Windows.Forms.TextBox txtDni;
-        private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.TextBox txtPatente;
         private System.Windows.Forms.Label lblPatente;
         private System.Windows.Forms.Button btnIngresoAuto;
@@ -332,5 +330,7 @@
         private System.Windows.Forms.ComboBox cmbSector;
         private System.Windows.Forms.Label lblDerivaSeguro;
         private System.Windows.Forms.ComboBox cmbSeguro;
+        private System.Windows.Forms.TextBox txtDni;
+        private System.Windows.Forms.Label lblDni;
     }
 }

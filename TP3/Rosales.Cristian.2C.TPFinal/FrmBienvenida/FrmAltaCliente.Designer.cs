@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.gBoxAltaCliente = new System.Windows.Forms.GroupBox();
-            this.btnAltaEmpleado = new System.Windows.Forms.Button();
+            this.txtPatente = new System.Windows.Forms.TextBox();
+            this.lblPatente = new System.Windows.Forms.Label();
+            this.btnAltaCliente = new System.Windows.Forms.Button();
             this.txtMail = new System.Windows.Forms.TextBox();
             this.lblMail = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -40,14 +42,15 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lstClientes = new System.Windows.Forms.ListBox();
-            this.lblClienteExistente = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.gBoxAltaCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // gBoxAltaCliente
             // 
-            this.gBoxAltaCliente.Controls.Add(this.btnAltaEmpleado);
+            this.gBoxAltaCliente.Controls.Add(this.txtPatente);
+            this.gBoxAltaCliente.Controls.Add(this.lblPatente);
+            this.gBoxAltaCliente.Controls.Add(this.btnAltaCliente);
             this.gBoxAltaCliente.Controls.Add(this.txtMail);
             this.gBoxAltaCliente.Controls.Add(this.lblMail);
             this.gBoxAltaCliente.Controls.Add(this.txtTelefono);
@@ -58,29 +61,45 @@
             this.gBoxAltaCliente.Controls.Add(this.lblApellido);
             this.gBoxAltaCliente.Controls.Add(this.txtNombre);
             this.gBoxAltaCliente.Controls.Add(this.lblNombre);
-            this.gBoxAltaCliente.Location = new System.Drawing.Point(12, 12);
+            this.gBoxAltaCliente.Location = new System.Drawing.Point(96, 44);
             this.gBoxAltaCliente.Name = "gBoxAltaCliente";
-            this.gBoxAltaCliente.Size = new System.Drawing.Size(281, 241);
-            this.gBoxAltaCliente.TabIndex = 19;
+            this.gBoxAltaCliente.Size = new System.Drawing.Size(415, 329);
+            this.gBoxAltaCliente.TabIndex = 15;
             this.gBoxAltaCliente.TabStop = false;
             this.gBoxAltaCliente.Text = "Cliente Nuevo";
             // 
-            // btnAltaEmpleado
+            // txtPatente
             // 
-            this.btnAltaEmpleado.Location = new System.Drawing.Point(40, 180);
-            this.btnAltaEmpleado.Name = "btnAltaEmpleado";
-            this.btnAltaEmpleado.Size = new System.Drawing.Size(202, 43);
-            this.btnAltaEmpleado.TabIndex = 17;
-            this.btnAltaEmpleado.Text = "Confirmar Alta Cliente";
-            this.btnAltaEmpleado.UseVisualStyleBackColor = true;
-            this.btnAltaEmpleado.Click += new System.EventHandler(this.btnAltaEmpleado_Click);
+            this.txtPatente.Location = new System.Drawing.Point(97, 167);
+            this.txtPatente.Name = "txtPatente";
+            this.txtPatente.Size = new System.Drawing.Size(162, 23);
+            this.txtPatente.TabIndex = 6;
+            // 
+            // lblPatente
+            // 
+            this.lblPatente.AutoSize = true;
+            this.lblPatente.Location = new System.Drawing.Point(8, 170);
+            this.lblPatente.Name = "lblPatente";
+            this.lblPatente.Size = new System.Drawing.Size(50, 15);
+            this.lblPatente.TabIndex = 14;
+            this.lblPatente.Text = "Patente:";
+            // 
+            // btnAltaCliente
+            // 
+            this.btnAltaCliente.Location = new System.Drawing.Point(116, 270);
+            this.btnAltaCliente.Name = "btnAltaCliente";
+            this.btnAltaCliente.Size = new System.Drawing.Size(202, 43);
+            this.btnAltaCliente.TabIndex = 7;
+            this.btnAltaCliente.Text = "Confirmar Alta Cliente";
+            this.btnAltaCliente.UseVisualStyleBackColor = true;
+            this.btnAltaCliente.Click += new System.EventHandler(this.btnAltaCliente_Click);
             // 
             // txtMail
             // 
             this.txtMail.Location = new System.Drawing.Point(97, 138);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(162, 23);
-            this.txtMail.TabIndex = 13;
+            this.txtMail.TabIndex = 5;
             // 
             // lblMail
             // 
@@ -88,7 +107,7 @@
             this.lblMail.Location = new System.Drawing.Point(8, 141);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(33, 15);
-            this.lblMail.TabIndex = 12;
+            this.lblMail.TabIndex = 13;
             this.lblMail.Text = "Mail:";
             // 
             // txtTelefono
@@ -96,7 +115,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(97, 109);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(162, 23);
-            this.txtTelefono.TabIndex = 11;
+            this.txtTelefono.TabIndex = 4;
             // 
             // lblTelefono
             // 
@@ -104,7 +123,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(8, 112);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(58, 15);
-            this.lblTelefono.TabIndex = 10;
+            this.lblTelefono.TabIndex = 12;
             this.lblTelefono.Text = "Telefono: ";
             // 
             // txtDni
@@ -112,7 +131,7 @@
             this.txtDni.Location = new System.Drawing.Point(97, 80);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(162, 23);
-            this.txtDni.TabIndex = 7;
+            this.txtDni.TabIndex = 3;
             // 
             // lblDni
             // 
@@ -120,7 +139,7 @@
             this.lblDni.Location = new System.Drawing.Point(8, 83);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(30, 15);
-            this.lblDni.TabIndex = 6;
+            this.lblDni.TabIndex = 11;
             this.lblDni.Text = "DNI:";
             // 
             // txtApellido
@@ -128,7 +147,7 @@
             this.txtApellido.Location = new System.Drawing.Point(97, 51);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(162, 23);
-            this.txtApellido.TabIndex = 5;
+            this.txtApellido.TabIndex = 2;
             // 
             // lblApellido
             // 
@@ -136,7 +155,7 @@
             this.lblApellido.Location = new System.Drawing.Point(8, 54);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(54, 15);
-            this.lblApellido.TabIndex = 4;
+            this.lblApellido.TabIndex = 10;
             this.lblApellido.Text = "Apellido:";
             // 
             // txtNombre
@@ -144,7 +163,7 @@
             this.txtNombre.Location = new System.Drawing.Point(97, 22);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(162, 23);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 1;
             // 
             // lblNombre
             // 
@@ -152,34 +171,25 @@
             this.lblNombre.Location = new System.Drawing.Point(8, 25);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(54, 15);
-            this.lblNombre.TabIndex = 2;
+            this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombre:";
             // 
-            // lstClientes
+            // btnVolver
             // 
-            this.lstClientes.FormattingEnabled = true;
-            this.lstClientes.ItemHeight = 15;
-            this.lstClientes.Location = new System.Drawing.Point(444, 30);
-            this.lstClientes.Name = "lstClientes";
-            this.lstClientes.Size = new System.Drawing.Size(168, 214);
-            this.lstClientes.TabIndex = 20;
-            // 
-            // lblClienteExistente
-            // 
-            this.lblClienteExistente.AutoSize = true;
-            this.lblClienteExistente.Location = new System.Drawing.Point(444, 9);
-            this.lblClienteExistente.Name = "lblClienteExistente";
-            this.lblClienteExistente.Size = new System.Drawing.Size(97, 15);
-            this.lblClienteExistente.TabIndex = 21;
-            this.lblClienteExistente.Text = "Cliente Existente:";
+            this.btnVolver.Location = new System.Drawing.Point(537, 406);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 8;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // FrmAltaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 441);
-            this.Controls.Add(this.lblClienteExistente);
-            this.Controls.Add(this.lstClientes);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.gBoxAltaCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -187,19 +197,17 @@
             this.Name = "FrmAltaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAltaCliente";
-            this.Activated += new System.EventHandler(this.FrmAltaCliente_Activated);
             this.Load += new System.EventHandler(this.FrmAltaCliente_Load);
             this.gBoxAltaCliente.ResumeLayout(false);
             this.gBoxAltaCliente.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox gBoxAltaCliente;
-        private System.Windows.Forms.Button btnAltaEmpleado;
+        private System.Windows.Forms.Button btnAltaCliente;
         private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.TextBox txtTelefono;
@@ -210,7 +218,8 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.ListBox lstClientes;
-        private System.Windows.Forms.Label lblClienteExistente;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.TextBox txtPatente;
+        private System.Windows.Forms.Label lblPatente;
     }
 }

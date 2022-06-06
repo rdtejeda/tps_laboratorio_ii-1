@@ -35,47 +35,21 @@ namespace FrmStyloCar
             //Trabajos trabajoLavado = new Trabajos(Sector.Lavado);
         }
 
-        internal void RecibirListaClientes(Clientes clientes)
-        {
-            
-        }
-
-        /// <summary>
-        /// Metodo que recibe y recorrer la lista
-        /// </summary>
-        /// <param name="clientes"></param>
-        internal Cliente RecibirRecorrerLista(Clientes listaClientes, int dni)
-        {
-            Cliente clienteAux = null;
-            foreach(Cliente c in listaClientes.ListaCliente)
-            {
-                if(c.Dni == dni)
-                {
-                    clienteAux = c;
-                }
-            }
-            return clienteAux;
-        } 
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnIngresoAuto_Click(object sender, EventArgs e)
         {
-            //Cliente clienteNuevo = new Cliente();
-            //listaClientes.Add(clienteNuevo);
+            FrmBienvenida frmBienvenida = new FrmBienvenida();
+
             string marca;
             string modelo;
             int anio;
             string patente;
-            //int dni;
+            int dni;
             bool seguro = false;
             Biblioteca.Color color;
             Automovil.Diagnostico diagnostico;
             Biblioteca.Sector sector;
             DateTime fechaInicio = DateTime.Today;
+            bool clienteNuevo = true;
 
             try
             {
@@ -104,90 +78,72 @@ namespace FrmStyloCar
                         throw new FechaIncorrectaExcepction();
                     }
 
+                    marca = txtMarca.Text;
+                    modelo = txtModelo.Text;
+                    patente = txtPatente.Text;
+                    color = (Biblioteca.Color)cmbColor.SelectedIndex;
+                    diagnostico = (Automovil.Diagnostico)cmbDiagnostico.SelectedIndex;
+                    sector = (Biblioteca.Sector)cmbDiagnostico.SelectedIndex;
+                    if (cmbSeguro.SelectedItem.ToString() == "SI")
+                    {
+                        seguro = true;
+                    }
+
                     try
                     {
+                        if (!int.TryParse(txtDni.Text, out dni) ||
+                            dni < 0 ||
+                            dni > 99999999)
+                        {
+                            throw new DniInvalidoExcepction();
+                        }
+
                         marca = txtMarca.Text;
                         modelo = txtModelo.Text;
                         patente = txtPatente.Text;
                         color = (Biblioteca.Color)cmbColor.SelectedIndex;
                         diagnostico = (Automovil.Diagnostico)cmbDiagnostico.SelectedIndex;
                         sector = (Biblioteca.Sector)cmbDiagnostico.SelectedIndex;
-                        if (cmbSeguro.SelectedItem.ToString() == "SI")
+                        if (cmbSeguro.SelectedText == "SI")
                         {
                             seguro = true;
                         }
 
-                        Automovil nuevoAuto = new Automovil(marca, modelo, anio, color, patente, diagnostico);
-                        Trabajo nuevoTrabajo = new Trabajo(fechaInicio.Date, nuevoAuto, seguro);
-
-                        switch (sector)
+                        foreach(Cliente c in FrmBienvenida.listaClientes)
                         {
-                            case(Sector.Chapa):
-                                listaTrabajos.Add(nuevoTrabajo);
+                            if(c.Dni == dni)
+                            {
+                                clienteNuevo = false;
                                 break;
-                            case (Sector.Pintura):
-                                trabajosPintura.Add(nuevoTrabajo);
-                                break;
-                            case (Sector.Lavado):
-                                trabajosLavado.Add(nuevoTrabajo);
-                                break;
+                            }
+
                         }
+                        if(clienteNuevo == true)
+                        {
+                            MessageBox.Show("Cliente Nuevo. Se debe dar de alta.",          "Mensaje",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            FrmAltaCliente frmAltaCliente = new FrmAltaCliente();
+                            frmAltaCliente.ShowDialog();
+                        }
+                        Automovil autoNuevo = new Automovil(marca, modelo, anio, color, patente, diagnostico);
+                        Trabajo nuevoTrabajo = new Trabajo(fechaInicio, autoNuevo, seguro, sector);
 
-                        MessageBox.Show("Trabajo Pendiente Agregado.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FrmBienvenida.listaTrabajos.Add(nuevoTrabajo);
+                        MessageBox.Show("Se dio de alta un nuevo trabajo pendiente.", "Exito",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        LimpiarTextBoxes();
 
                     }
-                    catch (Exception)
+                    catch (DniInvalidoExcepction)
                     {
-
-                        throw;
+                        MessageBox.Show("El DNI es inválido.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
-
-
-
-                    //try
-                    //{
-                    //    if(!int.TryParse(txtDni.Text, out dni) ||
-                    //        dni < 0 ||
-                    //        dni > 99999999)
-                    //    {
-                    //        throw new DniInvalidoExcepction();
-                    //    }
-
-                    //    marca = txtMarca.Text;
-                    //    modelo = txtModelo.Text;
-                    //    patente = txtPatente.Text;
-                    //    color = cmbColor.SelectedItem.ToString();
-                    //    diagnostico = cmbDiagnostico.SelectedItem.ToString();
-                    //    sector = cmbDiagnostico.SelectedItem.ToString();
-                    //    if(cmbSeguro.SelectedItem.ToString() == "SI")
-                    //    {
-                    //        seguro = true;
-                    //    }
-
-                    //    if(RecibirRecorrerLista(listaClientes, dni) == null)
-                    //    {
-                    //        FrmAltaCliente frmAltaCliente = new FrmAltaCliente();
-                    //        frmAltaCliente.ShowDialog();
-                    //    }
-
-                    //    //Trabajo trabajo = new Trabajo(fechaInicio.ToString("dd-MM-yyyy"););
-                    //    //switch (sector)
-                    //    //{
-                    //    //    case "Chapa":
-                    //    //        trabajosChapa.;
-                    //    //        break;
-                    //    //}
-                    //}
-                    //catch (DniInvalidoExcepction)
-                    //{
-                    //    MessageBox.Show("El DNI es inválido.", "Error",
-                    //    MessageBoxButtons.OK, MessageBoxIcon.Error); ;
-                    //}
                 }
                 catch (FechaIncorrectaExcepction)
                 {
-                    MessageBox.Show("El anio es inválido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                    MessageBox.Show("El anio es inválido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (ParametrosVaciosExcepction)
@@ -196,9 +152,24 @@ namespace FrmStyloCar
             }
         }
 
-        public void RecibirListaChapa(Trabajos listaChapa)
+        private void btnVolver_Click(object sender, EventArgs e)
         {
-            
+            LimpiarTextBoxes();
+            this.Close();
         }
+
+        private void LimpiarTextBoxes()
+        {
+            txtMarca.Clear();
+            txtModelo.Clear();
+            txtAnio.Clear();
+            txtPatente.Clear();
+            txtDni.Clear();
+            cmbColor.SelectedIndex = -1;
+            cmbSeguro.SelectedIndex = -1;
+            cmbDiagnostico.SelectedIndex = -1;
+            cmbSector.SelectedIndex = -1;
+        }
+        
     }
 }

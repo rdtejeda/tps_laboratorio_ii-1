@@ -10,14 +10,11 @@ namespace Biblioteca
     }
     public abstract class Vehiculo
     {
-        //protected int dniCliente;
         protected string marca;
         protected string modelo;
         protected int anio;
         protected Color color;
         protected string patente;
-        //protected int idTrabajo;
-        //protected bool flagTrabajoTerminado;
 
         /// <summary>
         /// Constructor con parametros, no se puede instanciar. Clase: VEHICULO
@@ -30,28 +27,14 @@ namespace Biblioteca
         /// <param name="patente"></param>
         /// <param name="idTrabajo"></param>
         /// <param name="flagTrabajoTerminado"></param>
-        protected Vehiculo(/*int dniCliente, */string marca, string modelo, int anio, Color color, string patente/*, int idTrabajo, bool flagTrabajoTerminado*/)
+        protected Vehiculo(string marca, string modelo, int anio, Color color, string patente)
         {
-            //this.dniCliente = dniCliente;
             this.marca = marca;
             this.modelo = modelo;
             this.anio = anio;
             this.color = color;
             this.patente = patente;
-            //this.idTrabajo = idTrabajo;
-            //this.flagTrabajoTerminado = flagTrabajoTerminado;
         }
-
-        /// <summary>
-        /// Prop DNI Cliente. ReadOnly
-        /// </summary>
-        //public int DniCliente
-        //{
-        //    get
-        //    {
-        //        return this.dniCliente;
-        //    }
-        //}
 
         /// <summary>
         /// Prop Marca. ReadOnly
@@ -109,28 +92,6 @@ namespace Biblioteca
         }
 
         /// <summary>
-        /// Prop Id Trabajo. ReadOnly
-        /// </summary>
-        //public int IdTrabajo
-        //{
-        //    get
-        //    {
-        //        return this.idTrabajo;
-        //    }
-        //}
-
-        /// <summary>
-        /// Prop Flag Trabajo Terminado. ReadOnly
-        /// </summary>
-        //public bool FlagTrabajoTerminado
-        //{
-        //    get
-        //    {
-        //        return this.flagTrabajoTerminado;
-        //    }
-        //}
-
-        /// <summary>
         /// Sobrecarga de ToString. Publica todos los datos del Vehículo
         /// </summary>
         /// <returns></returns>
@@ -142,7 +103,6 @@ namespace Biblioteca
             sb.AppendLine($"Patente: {this.Patente}");
             sb.AppendLine($"Anio: {this.Anio}");
             sb.AppendLine($"Color: {this.Color}");
-            //sb.AppendLine($"DNI Cliente: {this.DniCliente}");
             return sb.ToString();
         }
     }

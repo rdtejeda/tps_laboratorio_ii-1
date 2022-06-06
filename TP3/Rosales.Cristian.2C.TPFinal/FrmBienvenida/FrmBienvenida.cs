@@ -13,35 +13,46 @@ namespace FrmStyloCar
 {
     public partial class FrmBienvenida : Form
     {
+        public static List<Trabajo> listaTrabajos;
+        public static List<Cliente> listaClientes;
+        public static List<Empleado> listaEmpleados;
+
+        BindingSource trabajosBindingSource = new BindingSource();
+
         public FrmBienvenida()
         {
+            listaTrabajos = new List<Trabajo>();
+            listaClientes = new List<Cliente>();
+            listaEmpleados = new List<Empleado>();
             InitializeComponent();
+
         }
 
         private void FrmBienvenida_Load(object sender, EventArgs e)
         {
-            
+            txtFecha.Text = DateTime.Today.ToString("dd-MM-yyyy");
+            txtHora.Text = DateTime.Now.ToString("H:mm");        
         }
 
         #region Cambio de Form
         private void btnIngresoAuto_Click(object sender, EventArgs e)
         {
-            Clientes listaClientes = new Clientes();
-            Trabajos listaTrabajos = new Trabajos();
-            //Trabajos listaTrabajosPintura = new Trabajos(Sector.Pintura);
-            //Trabajos listaTrabajosLavado = new Trabajos(Sector.Lavado);
+            //Clientes listaClientes = new Clientes();
+            ////Trabajos listaTrabajosPintura = new Trabajos(Sector.Pintura);
+            ////Trabajos listaTrabajosLavado = new Trabajos(Sector.Lavado);
 
             FrmIngresoAuto frmIngresoAuto = new FrmIngresoAuto();
-            FrmAltaCliente frmIngresoCliente = new FrmAltaCliente();
+            //FrmAltaCliente frmIngresoCliente = new FrmAltaCliente();
 
-            frmIngresoAuto.RecibirListaClientes(listaClientes);
-            //frmIngresoAuto.RecibirDictTrabajos(dictTrabajos);
-            frmIngresoAuto.RecibirListaChapa(listaTrabajos);
-            //frmIngresoAuto.RecibirListaPintura(listaTrabajosChapa);
-            //frmIngresoAuto.RecibirListaLavado(listaTrabajosChapa);
-            frmIngresoCliente.RecibirLista(listaClientes);
+            //frmIngresoAuto.RecibirListaClientes(listaClientes);
+            //frmIngresoAuto.RecibirListTrabajos(listaTrabajos);
+            //frmIngresoAuto.RecibirListaChapa(listaTrabajos);
+            ////frmIngresoAuto.RecibirListaPintura(listaTrabajosChapa);
+            ////frmIngresoAuto.RecibirListaLavado(listaTrabajosChapa);
+            //frmIngresoCliente.RecibirLista(listaClientes);
             frmIngresoAuto.ShowDialog();
         }
+
         private void btnEgresoAuto_Click(object sender, EventArgs e)
         {
             FrmEgresoAuto frmEgresoAuto = new FrmEgresoAuto();
@@ -58,8 +69,13 @@ namespace FrmStyloCar
             FrmEmpleados frmEmpleados = new FrmEmpleados();
             frmEmpleados.ShowDialog();
         }
-        #endregion
+        private void btnInformes_Click(object sender, EventArgs e)
+        {
+            FrmInformes frmInformes = new FrmInformes();
+            frmInformes.ShowDialog();
 
+        }
+        #endregion
 
 
         #region Salir
