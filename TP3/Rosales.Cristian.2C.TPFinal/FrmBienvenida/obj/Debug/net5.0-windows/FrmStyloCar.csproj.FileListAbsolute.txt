@@ -26,3 +26,4 @@ D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\FrmBienvenida\obj\Debug\net5.0-windows\FrmStyloCar.FrmEmpleados.resources
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\FrmBienvenida\bin\Debug\net5.0-windows\ExcepcionesPersonalizadas.dll
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\FrmBienvenida\bin\Debug\net5.0-windows\ExcepcionesPersonalizadas.pdb
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\FrmBienvenida\obj\Debug\net5.0-windows\FrmStyloCar.FrmAltaCliente.resources

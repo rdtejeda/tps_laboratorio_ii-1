@@ -6,38 +6,72 @@ using System.Threading.Tasks;
 
 namespace Biblioteca
 {
+    //public static class Trabajos
     public class Trabajos
     {
-        public List<Trabajo> trabajos;
-        public Sector sector;
-        
-        /// <summary>
-        /// Constructor con Parametros. Inicializa la lista de trabajos y le asigna el sector que corresponde
-        /// </summary>
-        public Trabajos(Sector sector)
+        //static Dictionary<Trabajo, Sector> dicTrabajos;
+        public List<Trabajo> trabajosChapa;
+        public List<Trabajo> trabajosPintura;
+        public List<Trabajo> trabajosLavado;
+
+        public Trabajos()
         {
-            this.trabajos = new List<Trabajo>();
-            this.sector = sector;
+            this.trabajosChapa = new List<Trabajo>();
+            this.trabajosPintura = new List<Trabajo>();
+            this.trabajosLavado = new List<Trabajo>();
         }
 
-        /// <summary>
-        /// Incluyo un trabajo a la lista de trabajos
-        /// </summary>
-        /// <param name="trabajo"></param>
-        public void AgregarTrabajo(Trabajo trabajo)
+        public void Add(object nuevotrabajo)
         {
-            this.trabajos.Add(trabajo);
+            this.Add(nuevotrabajo);
         }
+        //public static Sector sector;
 
-        /// <summary>
-        /// Prop ListaTrabajos. Devuelve una lista de trabajos.
-        /// </summary>
-        public List<Trabajo> ListaTrabajos
-        {
-            get
-            {
-                return this.trabajos;
-            }
-        }
+        ///// <summary>
+        ///// Constructor con Parametros. Inicializa la lista de trabajos y le asigna el sector que corresponde
+        ///// </summary>
+        //public Trabajos(Sector sector)
+        //{
+        //    this.trabajos = new Trabajos();
+        //    this.sector = sector;
+        //}
+
+        ///// <summary>
+        ///// Prop ListaTrabajos. ReadOnly
+        ///// </summary>
+        //public static Dictionary<Trabajo, Sector> ListaTrabajos
+        //{
+        //    get
+        //    {
+        //        return dicTrabajos;
+        //    }
+        //    set
+        //    {
+        //        if(dicTrabajos ==  null)
+        //        {
+        //            dicTrabajos = new Dictionary<Trabajo, Sector>();
+        //        }
+        //    }
+        //}
+
+        ///// <summary>
+        ///// Incluyo un trabajo a la lista de trabajos
+        ///// </summary>
+        ///// <param name="trabajo"></param>
+        //public void AgregarTrabajo(List<T> trabajo)
+        //{
+        //    this.trabajos.Add(trabajo);
+        //}
+
+        ///// <summary>
+        ///// Prop ListaTrabajos. Devuelve una lista de trabajos.
+        ///// </summary>
+        //public List<T> ListaTrabajos
+        //{
+        //    get
+        //    {
+        //        return this.trabajos;
+        //    }
+        //}
     }
 }

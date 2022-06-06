@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Biblioteca/1.0.0": {
+        "dependencies": {
+          "ExcepcionesPersonalizadas": "1.0.0"
+        },
+        "runtime": {
+          "Biblioteca.dll": {}
+        }
+      },
+      "ExcepcionesPersonalizadas/1.0.0": {
+        "runtime": {
+          "ExcepcionesPersonalizadas.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Biblioteca/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExcepcionesPersonalizadas/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

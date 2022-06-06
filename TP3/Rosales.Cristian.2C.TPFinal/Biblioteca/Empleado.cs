@@ -15,8 +15,6 @@ namespace Biblioteca
     {
         private Sector sector;
         private DateTime fechaIngreso;
-        private List<Trabajo> trabajosPendientes;
-        private List<Trabajo> trabajosTerminados;
 
         /// <summary>
         /// Constructor con parametros. Usa el de la clase Base.
@@ -44,28 +42,6 @@ namespace Biblioteca
             get
             {
                 return this.fechaIngreso;
-            }
-        }
-
-        /// <summary>
-        /// Prop Trabajos Pendientes. ReadOnly
-        /// </summary>
-        public List<Trabajo> TrabajosPendientes
-        {
-            get
-            {
-                return this.trabajosPendientes.ToList();
-            }
-        }
-
-        /// <summary>
-        /// Prop Trabajos Terminados. ReadOnly
-        /// </summary>
-        public List <Trabajo> TrabajosTerminados
-        {
-            get
-            {
-                return this.trabajosTerminados.ToList();
             }
         }
 

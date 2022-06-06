@@ -18,15 +18,28 @@ namespace FrmStyloCar
             InitializeComponent();
         }
 
-        #region Cambio de Form
-        private void btnEmpleados_Click(object sender, EventArgs e)
+        private void FrmBienvenida_Load(object sender, EventArgs e)
         {
-            FrmEmpleados frmEmpleados = new FrmEmpleados();
-            frmEmpleados.ShowDialog();
+            
         }
+
+        #region Cambio de Form
         private void btnIngresoAuto_Click(object sender, EventArgs e)
         {
+            Clientes listaClientes = new Clientes();
+            Trabajos listaTrabajos = new Trabajos();
+            //Trabajos listaTrabajosPintura = new Trabajos(Sector.Pintura);
+            //Trabajos listaTrabajosLavado = new Trabajos(Sector.Lavado);
+
             FrmIngresoAuto frmIngresoAuto = new FrmIngresoAuto();
+            FrmAltaCliente frmIngresoCliente = new FrmAltaCliente();
+
+            frmIngresoAuto.RecibirListaClientes(listaClientes);
+            //frmIngresoAuto.RecibirDictTrabajos(dictTrabajos);
+            frmIngresoAuto.RecibirListaChapa(listaTrabajos);
+            //frmIngresoAuto.RecibirListaPintura(listaTrabajosChapa);
+            //frmIngresoAuto.RecibirListaLavado(listaTrabajosChapa);
+            frmIngresoCliente.RecibirLista(listaClientes);
             frmIngresoAuto.ShowDialog();
         }
         private void btnEgresoAuto_Click(object sender, EventArgs e)
@@ -39,6 +52,11 @@ namespace FrmStyloCar
         {
             FrmDeposito frmDeposito = new FrmDeposito();
             frmDeposito.ShowDialog();
+        }
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            FrmEmpleados frmEmpleados = new FrmEmpleados();
+            frmEmpleados.ShowDialog();
         }
         #endregion
 
@@ -59,11 +77,5 @@ namespace FrmStyloCar
         }
         #endregion
 
-        private void FrmBienvenida_Load(object sender, EventArgs e)
-        {
-            Trabajos trabajoChapa = new Trabajos(Sector.Chapa);
-            Trabajos trabajoPintura = new Trabajos(Sector.Pintura);
-            Trabajos trabajoLavado = new Trabajos(Sector.Lavado);
-        }
     }
 }

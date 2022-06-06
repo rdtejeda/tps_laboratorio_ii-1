@@ -158,6 +158,7 @@
             this.Controls.Add(this.lablSectorChapa);
             this.Controls.Add(this.btnVolver);
             this.Name = "FrmEmpleados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEmpleados | Rosales.Cristian.2C";
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
             this.ResumeLayout(false);

@@ -9,11 +9,13 @@ namespace Biblioteca
 {
     public class Trabajo
     {
-        private int idTrabajo;
+        //private int idTrabajo;
         private DateTime fechaInicio;
         private DateTime fechaFin;
-        private Cliente cliente;
+        //private Cliente cliente;
         private bool trabajoTerminado;
+        private Automovil auto;
+        private bool seguro;
 
         /// <summary>
         /// Prop Fecha de inicio de trabajo. ReadOnly
@@ -37,24 +39,24 @@ namespace Biblioteca
             }
         }
 
-        /// <summary>
-        /// Prop Cliente. ReadOnly
-        /// </summary>
-        public Cliente Cliente
-        {
-            get
-            {
-                return this.cliente;
-            }
-        }
+        ///// <summary>
+        ///// Prop Cliente. ReadOnly
+        ///// </summary>
+        //public Cliente Cliente
+        //{
+        //    get
+        //    {
+        //        return this.cliente;
+        //    }
+        //}
 
-        public int IdTrabajo
-        {
-            get
-            {
-                return this.idTrabajo;
-            }
-        }
+        //public int IdTrabajo
+        //{
+        //    get
+        //    {
+        //        return this.idTrabajo;
+        //    }
+        //}
 
         /// <summary>
         /// Prop Trabajo Terminado. Recupera el flag y lo setea en True o Flalse.
@@ -76,13 +78,25 @@ namespace Biblioteca
         /// </summary>
         /// <param name="fechaInicio"></param>
         /// <param name="cliente"></param>
-        public Trabajo(DateTime fechaInicio, Cliente cliente)
+        public Trabajo(DateTime fechaInicio, /*Cliente cliente*/Automovil auto, bool seguro)
         {
-            this.idTrabajo = IdTrabajo;
+            //this.idTrabajo = IdTrabajo;
             this.fechaInicio = fechaInicio;
-            this.cliente = cliente;
+            this.auto = auto;
+            //this.cliente = cliente;
+            this.seguro = seguro;
         }
 
+        /// <summary>
+        /// Prop Auto. ReadOnly
+        /// </summary>
+        public Automovil Auto
+        {
+            get
+            {
+                return this.auto;
+            }
+        }
 
 
 
