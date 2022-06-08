@@ -19,7 +19,6 @@ namespace Biblioteca
         /// <summary>
         /// Constructor con parametros, no se puede instanciar. Clase: VEHICULO
         /// </summary>
-        /// <param name="dniCliente"></param>
         /// <param name="marca"></param>
         /// <param name="modelo"></param>
         /// <param name="anio"></param>
@@ -98,11 +97,11 @@ namespace Biblioteca
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Marca: {this.Marca}");
-            sb.AppendLine($"Modelo: {this.Modelo}");
-            sb.AppendLine($"Patente: {this.Patente}");
-            sb.AppendLine($"Anio: {this.Anio}");
-            sb.AppendLine($"Color: {this.Color}");
+            sb.AppendLine($"Marca:      {this.Marca}");
+            sb.AppendLine($"Modelo:     {this.Modelo}");
+            sb.AppendLine($"Patente:    {this.Patente}");
+            sb.AppendLine($"Anio:       {this.Anio}");
+            sb.AppendLine($"Color:      {this.Color}");
             return sb.ToString();
         }
     }

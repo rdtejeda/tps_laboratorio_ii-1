@@ -6119,11 +6119,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3 - Copy\\Rosales.Cristian.2C.TPFinal\\StyloCarTest\\TestStyloCar.csproj",
+      "projectUniqueName": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\StyloCarTest\\TestStyloCar.csproj",
       "projectName": "TestStyloCar",
-      "projectPath": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3 - Copy\\Rosales.Cristian.2C.TPFinal\\StyloCarTest\\TestStyloCar.csproj",
+      "projectPath": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\StyloCarTest\\TestStyloCar.csproj",
       "packagesPath": "C:\\Users\\crisp\\.nuget\\packages\\",
-      "outputPath": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3 - Copy\\Rosales.Cristian.2C.TPFinal\\StyloCarTest\\obj\\",
+      "outputPath": "D:\\Cosas\\UTN FRA\\2022\\Laboratorio y Programacion\\tps_laboratorio_ii\\TP3\\Rosales.Cristian.2C.TPFinal\\StyloCarTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\crisp\\AppData\\Roaming\\NuGet\\NuGet.Config",

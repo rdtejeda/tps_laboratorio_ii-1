@@ -82,6 +82,9 @@ namespace Biblioteca
             }
         }
 
+        /// <summary>
+        /// Propiedad Sector.
+        /// </summary>
         public Sector Sector
         {
             get
@@ -94,14 +97,18 @@ namespace Biblioteca
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Fecha Inicio: {this.FechaInicio}");
-            sb.AppendLine($"Automovil | Marca: {auto.Marca}");
+            sb.AppendLine($"Fecha Inicio:       {this.FechaInicio}");
+            sb.AppendLine($"Automovil | Marca:  {auto.Marca}");
             sb.AppendLine($"Automovil | Modelo: {auto.Modelo}");
-            sb.AppendLine($"Patente: {auto.Patente}");
-            sb.AppendLine($"Sector: {this.Sector}");
+            sb.AppendLine($"Patente:            {auto.Patente}");
+            sb.AppendLine($"Sector:             {this.Sector}");
             return sb.ToString();
         }
 
