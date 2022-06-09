@@ -57,3 +57,4 @@ D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\R
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\FrmBienvenida\obj\Debug\net5.0-windows\FrmStyloCar.genruntimeconfig.cache
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\FrmBienvenida\obj\Debug\net5.0-windows\ref\FrmStyloCar.dll
 D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3 - Copy\Rosales.Cristian.2C.TPFinal\FrmBienvenida\obj\Debug\net5.0-windows\FrmStyloCar.FrmInformes.resources
+D:\Cosas\UTN FRA\2022\Laboratorio y Programacion\tps_laboratorio_ii\TP3\Rosales.Cristian.2C.TPFinal\FrmBienvenida\obj\Debug\net5.0-windows\FrmStyloCar.FrmInformes.resources

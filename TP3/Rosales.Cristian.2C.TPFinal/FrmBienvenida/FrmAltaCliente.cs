@@ -21,7 +21,7 @@ namespace FrmStyloCar
 
         private void FrmAltaCliente_Load(object sender, EventArgs e)
         {
-
+            //FrmIngresoAuto frmIngresoAuto = new FrmIngresoAuto();
         }
 
         private void btnAltaCliente_Click(object sender, EventArgs e)

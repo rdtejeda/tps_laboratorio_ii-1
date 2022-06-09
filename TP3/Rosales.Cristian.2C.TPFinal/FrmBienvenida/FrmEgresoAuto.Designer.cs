@@ -35,6 +35,7 @@
             this.lblTrabajosPendientes = new System.Windows.Forms.Label();
             this.btnTerminado = new System.Windows.Forms.Button();
             this.gBoxEgreso = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.gBoxEgreso.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,9 +85,9 @@
             // 
             // btnTerminado
             // 
-            this.btnTerminado.Location = new System.Drawing.Point(26, 175);
+            this.btnTerminado.Location = new System.Drawing.Point(26, 204);
             this.btnTerminado.Name = "btnTerminado";
-            this.btnTerminado.Size = new System.Drawing.Size(197, 115);
+            this.btnTerminado.Size = new System.Drawing.Size(197, 86);
             this.btnTerminado.TabIndex = 7;
             this.btnTerminado.Text = "Trabajo Terminado";
             this.btnTerminado.UseVisualStyleBackColor = true;
@@ -94,6 +95,7 @@
             // 
             // gBoxEgreso
             // 
+            this.gBoxEgreso.Controls.Add(this.btnBuscar);
             this.gBoxEgreso.Controls.Add(this.btnTerminado);
             this.gBoxEgreso.Controls.Add(this.lblTrabajosPendientes);
             this.gBoxEgreso.Controls.Add(this.lstTrabajos);
@@ -106,6 +108,16 @@
             this.gBoxEgreso.TabStop = false;
             this.gBoxEgreso.Text = "Egreso Auto:";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(26, 104);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(197, 94);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // FrmEgresoAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -115,6 +127,7 @@
             this.Controls.Add(this.btnVolver);
             this.Name = "FrmEgresoAuto";
             this.Text = "FrmEgresoAuto | Rosales.Cristian.2C";
+            this.Load += new System.EventHandler(this.FrmEgresoAuto_Load);
             this.gBoxEgreso.ResumeLayout(false);
             this.gBoxEgreso.PerformLayout();
             this.ResumeLayout(false);
@@ -130,5 +143,6 @@
         private System.Windows.Forms.Label lblTrabajosPendientes;
         private System.Windows.Forms.Button btnTerminado;
         private System.Windows.Forms.GroupBox gBoxEgreso;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

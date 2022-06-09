@@ -36,19 +36,9 @@ namespace FrmStyloCar
                 }
                 patente = txtPatente.Text;
 
-                foreach(Trabajo t in FrmBienvenida.listaTrabajos)
-                {
-                    if(t.Auto.Patente == patente)
-                    {
-                        if(t.TrabajoTerminado == false)
-                        {
-                            lstTrabajos.Items.Add(t.ToString());
-                        }
-                    }
-                }
                 try
                 {
-                    if(lstTrabajos.SelectedItem is null)
+                    if(lstTrabajos.SelectedIndex == -1)
                     {
                         throw new ParametrosVaciosExcepction();
                     }
@@ -56,11 +46,12 @@ namespace FrmStyloCar
                     Trabajo trabajoTerminar = lstTrabajos.SelectedItem as Trabajo;
                     if(trabajoTerminar != null)
                     {
+                        trabajoTerminar.TrabajoTerminado = true;
                         trabajoTerminar.FechaFin = fechaFin;
                      
                     }
                     MessageBox.Show("Se termino el trabajo seleccionado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarBoxes();
+                        LimpiarBoxes();
 
                 }
                 catch (Exception)
@@ -68,11 +59,6 @@ namespace FrmStyloCar
 
                     MessageBox.Show("Debe seleccionar un trabajo para terminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
-                
-
-                
-
             }
             catch (PatenteInvalidaException)
             {
@@ -86,6 +72,64 @@ namespace FrmStyloCar
         {
             txtPatente.Clear();
             lstTrabajos.ResetText();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            FrmBienvenida frmBienvenida = new FrmBienvenida();
+            try
+            {
+                if (String.IsNullOrEmpty(txtPatente.Text))
+                {
+                    throw new ParametrosVaciosExcepction();
+                }
+
+                Automovil auxAuto = null;
+                foreach(Trabajo trabajo in FrmBienvenida.listaTrabajos)
+                {
+                    if(trabajo.Auto.Patente == txtPatente.Text)
+                    {
+                        lstTrabajos.Items.Add(trabajo); 
+                        auxAuto = trabajo.Auto;
+                    }
+                }
+                try
+                {
+                    if(auxAuto is null)
+                    {
+                        throw new ParametrosVaciosExcepction();
+                    }
+                    try
+                    {
+                        if(lstTrabajos.SelectedIndex == -1)
+                        {
+                            throw new ParametrosVaciosExcepction();
+                        }
+                    }
+                    catch (ParametrosVaciosExcepction)
+                    {
+
+                        MessageBox.Show("No se seleccionó ningún trabajo de la lista para poder FINALIZAR.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                catch (ParametrosVaciosExcepction)
+                {
+                    MessageBox.Show("No se encontró la patente ingresada.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (ParametrosVaciosExcepction)
+            {
+                MessageBox.Show("Se debe ingresar una patente a buscar.", "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void FrmEgresoAuto_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
